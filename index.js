@@ -365,3 +365,52 @@ document.addEventListener("DOMContentLoaded", () => {
   viewport.addEventListener("dragstart", (event) => event.preventDefault());
   window.setInterval(advanceSlide, 4000);
 });
+
+// Detail Page Designs: open the selected long-form detail in a scrollable modal.
+document.addEventListener("DOMContentLoaded", () => {
+  const triggers = [...document.querySelectorAll("[data-detail-target]")];
+  const pages = [...document.querySelectorAll(".detail-page")];
+  const modal = document.getElementById("detailModal");
+  const scrollArea = modal?.querySelector(".detail-modal__scroll");
+
+  if (!triggers.length || !pages.length || !modal || !scrollArea) return;
+
+  let activeTrigger = null;
+
+  const closeModal = () => {
+    if (modal.hidden) return;
+
+    modal.hidden = true;
+    document.body.classList.remove("is-detail-modal-open");
+    triggers.forEach((trigger) => trigger.setAttribute("aria-expanded", "false"));
+    activeTrigger?.focus();
+  };
+
+  triggers.forEach((trigger) => {
+    trigger.addEventListener("click", () => {
+      const page = document.getElementById(trigger.dataset.detailTarget);
+      if (!page) return;
+
+      pages.forEach((item) => {
+        item.hidden = item !== page;
+      });
+      triggers.forEach((item) => {
+        item.setAttribute("aria-expanded", String(item === trigger));
+      });
+
+      activeTrigger = trigger;
+      modal.hidden = false;
+      document.body.classList.add("is-detail-modal-open");
+      scrollArea.scrollTop = 0;
+      modal.querySelector(".detail-modal__close")?.focus();
+    });
+  });
+
+  modal.addEventListener("click", (event) => {
+    if (event.target.closest("[data-detail-close]")) closeModal();
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape" && !modal.hidden) closeModal();
+  });
+});
