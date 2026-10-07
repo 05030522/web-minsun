@@ -1,0 +1,7 @@
+[17260:25316:1002/204909.726:ERROR:components\os_crypt\sync\os_crypt_win.cc:77] Failed to encrypt: 지정된 파일을 찾을 수 없습니다. (0x2)
+[17260:25316:1002/204909.734:ERROR:net\base\network_change_notifier_win.cc:189] WSALookupServiceBegin failed with: -1
+[17260:12012:1002/204909.758:ERROR:chrome\installer\util\google_update_settings.cc:265] Failed opening key Software\Google\Update\ClientStateMedium\{8A69D345-D564-463c-AFF1-A69D9E530F96} to set usagestats; result: 5
+[17260:12012:1002/204909.798:ERROR:components\password_manager\core\browser\password_store\login_database_async_helper.cc:114] Encryption is not available.
+[17260:25140:1002/204909.799:ERROR:components\password_manager\core\browser\password_store\login_database_async_helper.cc:114] Encryption is not available.
+
+DevTools listening on ws://127.0.0.1:9223/devtools/browser/da7c5438-2ff5-4fbf-9589-c058ce4b7f89
