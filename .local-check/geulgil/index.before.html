@@ -1,0 +1,1329 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="./css/font.css">
+  <link rel="stylesheet" href="./css/index.css?v=8">
+  <link rel="stylesheet" href="./css/lumora-case.css">
+  <link rel="stylesheet" href="./css/motion.css">
+  <link rel="stylesheet" href="./css/about-rabbit.css">
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.addEventListener('pageshow', () => {
+      if (!window.location.hash) {
+        window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      }
+    });
+  </script>
+  <script src="./index.js" defer></script>
+  <script src="./js/lumora-case.js" defer></script>
+  <script src="./js/motion.js" defer></script>
+  <script src="./js/about-rabbit.js" defer></script>
+
+  <title>백민선 포트폴리오</title>
+</head>
+
+<body>
+
+  <!-- =========================
+       HERO
+  ========================== -->
+  <section class="hero" id="home">
+
+    <!-- 배경 -->
+    <img src="./img/Hero background.png" alt="백민선 포트폴리오 히어로 배너" class="hero__image">
+
+    <!-- DESIGN -->
+    <a href="#design" class="hero-popup hero-popup--design" aria-label="디자인 작업물 보기">
+      <img src="./img/popup-design.png" alt="Design">
+    </a>
+
+    <!-- ABOUT -->
+    <a href="#about" class="hero-popup hero-popup--about" aria-label="소개 보기">
+      <img src="./img/popup-about.png" alt="About">
+    </a>
+
+    <!-- WORK -->
+    <a href="#career" class="hero-popup hero-popup--work" aria-label="프로젝트 경험 보기">
+      <img src="./img/popup-work.png" alt="Work">
+    </a>
+
+    <!-- CONTACT -->
+    <a href="#contact" class="hero-popup hero-popup--contact" aria-label="연락처 보기">
+      <img src="./img/popup-contact.png" alt="Contact">
+    </a>
+
+
+    <!-- 토끼 -->
+    <img src="./img/rabbit-no-laptop.png" alt="" aria-hidden="true" class="hero__rabbit hero__rabbit--moving">
+
+    <img src="./img/rabbit-head-and-ears.png" alt="" aria-hidden="true" class="hero__rabbit hero__rabbit--fixed">
+
+  </section>
+
+
+  <nav class="section-nav" aria-label="포트폴리오 메뉴">
+    <div class="section-nav__inner">
+      <div class="section-nav__links">
+        <a href="#home">HOME</a>
+        <a href="#about">ABOUT ME</a>
+        <a href="#popups">POPUPS</a>
+        <a href="#banners">BANNERS</a>
+        <a href="#poster">POSTER</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#contact">CONTACT</a>
+      </div>
+      <a class="section-nav__resume" href="#" aria-label="Design Resume, 임시 링크">Design Resume</a>
+    </div>
+  </nav>
+  <main class="portfolio">
+
+
+
+    <!-- =========================
+         ABOUT
+    ========================== -->
+    <section class="Section2" id="about" aria-labelledby="about-title">
+      <div class="Section2 Number">
+        <h1>01</h1>
+        <h2 id="about-title">INTRODUCE</h2>
+      </div>
+
+      <!-- 사진과 내용 -->
+      <div class="Section2 inside">
+        <div class="Section2 text">
+          <p>
+            필요한 것을 정확하게 보여주는 디자인을 고민합니다.<br>
+            사용자의 시선과 흐름을 생각하며<br>
+            <strong>단순하지만 분명한</strong> 웹 경험을 만들어갑니다.
+          </p>
+        </div>
+
+        <div class="Section2 image">
+          <img src="./img/ABOUTME.png" alt="프로필사진">
+          <p class="Section2 caption">WEB DESIGNER <strong>백민선</strong></p>
+        </div>
+      </div>
+
+      <!-- C와 내용 -->
+      <div class="Section3">
+        <div class="about-rabbit-window" aria-hidden="true">
+          <img src="./img/rabbit-peek.png" alt="" aria-hidden="true" class="about-rabbit-peek" width="1254" height="1254" decoding="async">
+        </div>
+        <div class="Section3 inside">
+          <div class="Section3 showcase" aria-label="디자인 메시지">
+            <img src="./img/PINK.png" alt="" class="Section3 pink-brush" aria-hidden="true">
+            <img src="./img/PINK-C.png" alt="분홍색 털실로 만든 알파벳 C" class="Section3 pink-c">
+            <p class="Section3 message"><strong>Thoughtful</strong> design,<br>clear experience</p>
+          </div>
+
+          <h3 class="Section3 title">기본에서 시작해 디테일로 완성하는 웹디자이너</h3>
+
+          <div class="Section3 intro">
+            <p>
+              좋은디자인은 <strong>기본에서</strong> 시작된다고 생각합니다.<br>
+              정렬과 여백, 정보의 우선순위를 고려해<br>
+              각 요소가 자연스럽게 연결되도록 디자인합니다.
+            </p>
+            <p>
+              기획 의도를 이해하고 <strong>개발 과정까지 고려하며,</strong><br>
+              <strong>원활한 소통을</strong> 통해 더 나은 결과를 만들어가고 있습니다.
+            </p>
+            <p>
+              새로운 디자인과 기술을 꾸준히 배우며<br>
+              기본을 바탕으로 성장하는 디자이너가 되고 싶습니다.
+            </p>
+          </div>
+
+          <dl class="Section3 profile">
+            <div>
+              <dt>NAME</dt>
+              <dd>백민선</dd>
+            </div>
+            <div>
+              <dt>BIRTH</dt>
+              <dd>1994.12.07</dd>
+            </div>
+            <div>
+              <dt>MOBILE</dt>
+              <dd>010.5189.5925</dd>
+            </div>
+            <div>
+              <dt>ADDRESS</dt>
+              <dd>서울특별시 노원구</dd>
+            </div>
+            <div>
+              <dt>ROLE</dt>
+              <dd>WEB DESIGNER / PUBLISHER</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================
+         SKILLS / CONTENTS
+    ========================== -->
+    <section class="contents" id="skills" aria-labelledby="contents-title">
+
+      <div class="skills-heading">
+        <img src="./img/biue-s.png" alt="" class="skills-heading-s" aria-hidden="true">
+        <h2 id="contents-title"><span class="sr-only">S</span>kill &amp; Tools</h2>
+      </div>
+
+      <div class="skills-card">
+        <article class="skill-item">
+          <h3>PHOTOSHOP <img src="./img/PHOTOSHOP.png" alt="Photoshop"></h3>
+          <ul>
+            <li>이미지 합성 및 보정</li>
+            <li>배너 / 팝업 / 이벤트 / 포스터 디자인</li>
+            <li>상세페이지 디자인</li>
+            <li>마스크 / 레이어 / 블렌딩 활용 디자인</li>
+            <li>제품 및 인물 이미지 보정</li>
+          </ul>
+        </article>
+
+        <article class="skill-item">
+          <h3>ILLUSTRATOR <img src="./img/ILLUSTRATOR.png" alt="Illustrator"></h3>
+          <ul>
+            <li>상세페이지 및 배너 디자인</li>
+            <li>이벤트 / 프로모션 이미지 제작</li>
+            <li>아이콘 및 간단한 그래픽 요소 제작</li>
+            <li>텍스트와 이미지 배치 및 레이아웃 구성</li>
+            <li>웹 콘텐츠에 필요한 디자인 작업</li>
+          </ul>
+        </article>
+
+        <article class="skill-item">
+          <h3>Figma <img src="./img/Figma.png" alt="Figma"></h3>
+          <ul>
+            <li>웹사이트 및 랜딩페이지 UI 디자인</li>
+            <li>Auto Layout을 활용한 레이아웃 구성</li>
+            <li>Component / Variant 제작</li>
+            <li>디자인 시스템 기초 구성</li>
+            <li>Prototype을 활용한 화면 흐름 제작</li>
+            <li>개발 전달을 고려한 디자인 파일 정리</li>
+          </ul>
+        </article>
+
+        <article class="skill-item">
+          <h3>GIT &amp; GITHUB <img src="./img/GIT &amp; GITHUB.png" alt="GitHub"></h3>
+          <ul>
+            <li>프로젝트 파일 관리</li>
+            <li>SourceTree를 이용한 커밋 및 푸시</li>
+            <li>원격 저장소에 작업 내용 업로드</li>
+            <li>브랜치를 활용한 팀 작업</li>
+            <li>작업 내용 머지 및 충돌 확인</li>
+          </ul>
+        </article>
+
+        <article class="skill-item">
+          <h3>NOTION <img src="./img/NOTION.png" alt="Notion"></h3>
+          <ul>
+            <li>프로젝트 및 작업 내용 정리</li>
+            <li>일정 및 업무 내용 기록</li>
+            <li>참고 자료 및 디자인 자료 정리</li>
+            <li>간단한 포트폴리오 / 문서 구성</li>
+          </ul>
+        </article>
+
+        <article class="skill-item skill-item--empty" aria-hidden="true"></article>
+
+        <article class="skill-item">
+          <h3>CSS <img src="./img/css.png" alt="CSS"></h3>
+          <ul>
+            <li>웹페이지 레이아웃 구성 및 수정</li>
+            <li>폰트 / 컬러 / 여백 등 스타일 적용</li>
+            <li>Flexbox를 활용한 기본 배치</li>
+            <li>이미지 크기 및 위치 조정</li>
+            <li>반응형을 고려한 기본 스타일 수정</li>
+            <li>시안에 맞춘 CSS 코드 수정 및 적용</li>
+          </ul>
+        </article>
+
+        <article class="skill-item">
+          <h3>HTML <img src="./img/HTML5.png" alt="HTML5"></h3>
+          <ul>
+            <li>기본적인 웹페이지 구조 작성</li>
+            <li>섹션 및 콘텐츠 영역 구성</li>
+            <li>이미지 / CSS / JS 파일 경로 연결</li>
+            <li>메뉴 및 버튼을 활용한 페이지 이동 연결</li>
+            <li>기존 코드를 참고한 간단한 구조 수정</li>
+            <li>시안에 맞춘 기본 웹페이지 제작</li>
+          </ul>
+        </article>
+      </div>
+
+    </section>
+
+
+
+
+    <!-- =================================
+         POPUP DESIGNS
+    ================================== -->
+    <section class="popup-designs" id="popup">
+
+      <header class="popup-designs__intro">
+        <h2>Popup Designs</h2>
+        <p class="popup-designs__subtitle">Highlight key information</p>
+        <p class="popup-designs__description">
+          중요한 정보와 프로모션 효과를 한눈에 전달하고자 했습니다.<br>
+          사용자의 시선을 자연스럽게 유도하여 콘텐츠 인지도를 높였습니다.
+        </p>
+      </header>
+
+      <!-- 왼쪽 설명 -->
+      <div class="popup-title-area">
+
+        <p class="section-number" id="projectNumber">
+          01
+        </p>
+
+        <h2 id="projectTitle">
+          블랙프라이데이 팝업
+        </h2>
+
+        <div class="section-description">
+
+          <p id="projectDescription1">
+            블랙프라이데이의 강렬한 세일 분위기를 시각화하기 위해
+            블랙 배경과 핑크 컬러의 대비를 활용했습니다.
+          </p>
+
+          <p id="projectDescription2">
+            입체적인 타이포그래피와 테이프 그래픽을 통해
+            주목도를 높였으며, 할인 혜택과 CTA 버튼이 자연스럽게 이어지도록 구성해 프로모션의 몰입감을 강화했습니다.
+          </p>
+
+        </div>
+
+
+        <!-- 현재 위치 -->
+        <div class="popup-progress">
+
+          <span class="current-number">
+            01
+          </span>
+
+          <div class="progress-line">
+            <span></span>
+          </div>
+
+          <span class="total-number">
+            05
+          </span>
+
+        </div>
+
+      </div>
+
+
+
+      <!-- 오른쪽 슬라이더 -->
+      <div class="popup-slider-wrap">
+
+        <button class="slide-button prev-button" type="button" aria-label="이전 작품">
+          ←
+        </button>
+
+
+        <div class="popup-viewport">
+
+          <div class="popup-track">
+
+
+            <!-- 01 -->
+            <article class="popup-card active" data-number="01" data-title="Black Friday 팝업"
+              data-description1="블랙프라이데이의 강렬한 세일 분위기를 시각화하기 위해 블랙 배경과 핑크 컬러의 대비를 활용했습니다." data-description2="입체적인 타이포그래피와 테이프 그래픽을 통해
+              주목도를 높였으며, 할인 혜택과 CTA 버튼이 자연스럽게 이어지도록 구성해 프로모션의 몰입감을 강화했습니다.">
+
+              <div class="popup-image">
+
+                <img src="./img/BlackFriday-pup.png" alt="블랙프라이데이 팝업">
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 02 -->
+            <article class="popup-card" data-number="02" data-title="Lego 팝업"
+              data-description1="어린이날의 밝고 신나는 분위기를 표현하기 위해 블루 배경과 레고 특유의 선명한 컬러를 활용했습니다."
+              data-description2="레고 캐릭터와 블록, 선물 그래픽을 역동적으로 배치해 즐거운 분위기를 강조했으며, 할인 문구를 크게 구성해 이벤트 혜택이 한눈에 들어오도록 디자인했습니다.">
+
+              <div class="popup-image">
+
+                <img src="./img/Lego-pup.png" alt="레고 팝업">
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 03 -->
+            <article class="popup-card" data-number="03" data-title="Twosome Place 팝업"
+              data-description1="투썸플레이스의 시즌 음료인 피치 시트러스 크러쉬의 상큼한 이미지를 표현하기 위해 옐로우와 오렌지 계열의 따뜻한 컬러를 활용했습니다."
+              data-description2="음료와 복숭아, 시트러스 이미지를 중심으로 배치하고 야자수 잎 그래픽을 더해 청량한 분위기를 강조했으며, 투썸플레이스만의 감성적인 브랜드 이미지와 제품의 신선한 계절감을 자연스럽게 전달하도록 구성했습니다.">
+
+              <div class="popup-image">
+
+                <img src="./img/Twosome-pup.png" alt="투썸플레이스 팝업">
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 04 -->
+            <article class="popup-card" data-number="04" data-title="Adidas Gazelle 팝업"
+              data-description1="블랙위크 프로모션의 강렬한 분위기를 표현하기 위해 딥 블루 컬러와 화이트 스트라이프를 활용해 아디다스의 브랜드 이미지를 강조했습니다."
+              data-description2="가젤 제품 이미지를 중심으로 배치하고 할인율과 쿠폰 정보를 명확하게 구성해 혜택이 한눈에 들어오도록 했으며, 전체적으로 스포티하고 직관적인 분위기로 디자인했습니다.">
+
+              <div class="popup-image">
+
+                <img src="./img/Adidas-pup.png" alt="아디아스 팝업">
+
+              </div>
+
+            </article>
+
+
+
+            <!-- 05 -->
+            <article class="popup-card" data-number="05" data-title="Casamia chair 팝업"
+              data-description1="편안하고 감성적인 휴식 공간을 표현하기 위해 베이지와 우드 톤을 중심으로 따뜻하고 차분한 분위기를 구성했습니다."
+              data-description2="의자 제품을 크게 배치하고 다양한 각도의 이미지를 함께 보여주어 디자인과 형태를 직관적으로 전달했으며, 가격 정보와 팝업 혜택을 하단에 정리해 제품과 프로모션 내용을 한눈에 확인할 수 있도록 했습니다.">
+
+              <div class="popup-image">
+
+                <img src="./img/Chair-pup.png" alt="까사미아 의자 팝업">
+
+              </div>
+
+            </article>
+
+
+          </div>
+
+        </div>
+
+
+        <button class="slide-button next-button" type="button" aria-label="다음 작품">
+          →
+        </button>
+
+
+        <div class="popup-dots"></div>
+
+      </div>
+
+    </section>
+
+    <div class="popup-modal" id="popupModal" role="dialog" aria-modal="true" aria-labelledby="popupModalTitle" hidden>
+      <div class="popup-modal__backdrop" data-popup-close></div>
+
+      <div class="popup-modal__panel">
+        <button class="popup-modal__close" type="button" aria-label="팝업 상세 닫기" data-popup-close>×</button>
+
+        <div class="popup-modal__copy">
+          <p class="popup-modal__number" id="popupModalNumber">01</p>
+          <h2 id="popupModalTitle"></h2>
+          <p id="popupModalDescription1"></p>
+          <p id="popupModalDescription2"></p>
+        </div>
+
+        <div class="popup-modal__visual">
+          <img id="popupModalImage" src="" alt="">
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================
+         POSTER DESIGNS
+    ========================== -->
+    <section class="poster-designs" id="poster" aria-labelledby="poster-designs-title">
+      <div class="poster-designs__projects">
+        <article class="poster-project">
+          <div class="poster1" role="img" aria-label="CURLY DAYS 포스터">
+            <img src="./img/Poster1.png" alt="CURLY DAYS 포스터">
+          </div>
+          <div class="poster-project__copy">
+            <p class="poster-project__number">01</p>
+            <h3>CURLY DAYS</h3>
+            <p>밝은 하늘과 핑크 컬러를 중심으로 하이틴 영화의 경쾌한 분위기를 표현했고,
+              <br>
+              주인공 마야를 중앙에 배치해 밝고 당당한 매력을 강조했습니다.
+              <br>
+              스티커와 낙서 같은 스크랩북 요소로 10대의 개성과 자유로운 분위기를 담고,<br> ‘다름도 매력이 될 수 있다’는 영화의 메시지를 표현했습니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="poster-project">
+          <div class="poster2" role="img" aria-label="Night Wave 임시 포스터">
+            <span>ÉLORA PERFUME</span>
+            <img src="./img/Poster2.png" alt="ÉLORA PERFUME 포스터">
+          </div>
+          <div class="poster-project__copy">
+            <p class="poster-project__number">02</p>
+            <h3>ÉLORA PERFUME</h3>
+            <p>은은한 로즈 컬러와 골드 디테일을 중심으로
+              우아하고 고급스러운 분위기를 표현했습니다.
+              <br>
+              향수병을 중앙에 배치해 브랜드의 섬세한 이미지를 강조했습니다.
+              <br><br>
+              여백을 활용한 심플한 구성과
+              세련된 타이포그래피로
+              프리미엄 향수의 감성을 담고,<br>
+              부드럽고 여성스러운 브랜드
+              이미지를 표현했습니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="poster-project">
+          <div class="poster3" role="img" aria-label="Film Archive 임시 포스터">
+            <img src="./img/Poster3.png" alt="TORRIDEN × OLIVE YOUNG 포스터">
+          </div>
+          <div class="poster-project__copy">
+            <p class="poster-project__number">03</p>
+            <h3>TORRIDEN × OLIVE YOUNG</h3>
+            <p>시원한 블루 톤과 물결 이미지를 활용해 여름철 수분 케어의 청량한 분위기를 표현했습니다.<br>
+              제품을 중앙에 배치해 토리든의 촉촉한 이미지를 강조했습니다.<br><br>
+              워터 스플래시와 얼음 요소를 활용해 시원한 수분감을 시각적으로 표현하고,<br> 할인과 한정 기획 문구를 강조해 올리브영 프로모션 포스터로 구성했습니다.</p>
+          </div>
+        </article>
+
+        <article class="poster-project">
+          <div class="poster4" role="img" aria-label="Balance of Form 임시 포스터">
+            <img src="./img/Poster4.png" alt="NIKE SHOX R4 포스터">
+          </div>
+          <div class="poster-project__copy">
+            <p class="poster-project__number">04</p>
+            <h3>NIKE SHOX R4</h3>
+            <p>블랙과 실버 컬러에 강렬한 블루 포인트를 더해 스포티하고 역동적인 분위기를 표현했습니다. <br> 제품을 크게 배치해 SHOX 특유의 구조와 실루엣을 강조했습니다.
+              <br><br>
+              기울어진 그래픽과 분할 이미지를 활용해 속도감 있는 구성을 만들고, <br> 브라질 컬러 포인트를 더해 에너지 넘치는 스니커즈 이미지를 표현했습니다.
+            </p>
+          </div>
+        </article>
+
+        <article class="poster-project">
+          <div class="poster5" role="img" aria-label="Summer Market 임시 포스터">
+            <img src="./img/Poster5.png" alt="PENTAPORT FESTIVAL 포스터">
+          </div>
+          <div class="poster-project__copy">
+            <p class="poster-project__number">05</p>
+            <h3>PENTAPORT FESTIVAL</h3>
+            <p>선명한 블루와 그린 컬러를 중심으로 여름 음악축제의 밝고 활기찬
+              분위기를 표현했습니다.<br>
+              무대와 관객을 함께 배치해 현장감과 축제의 에너지를 강조했습니다.
+              <br><br>
+              서울의 랜드마크와 일러스트 요소를 활용해 도시형 페스티벌의 특징을 담고, <br> 다채로운 그래픽으로 즐겁고 자유로운 축제 이미지를 표현했습니다.
+            </p>
+          </div>
+        </article>
+      </div>
+
+      <aside class="poster-designs__intro">
+        <h2 id="poster-designs-title">Poster Designs</h2>
+        <p class="poster-designs__subtitle">Essence-Focused</p>
+        <p>핵심 메시지가 가장 먼저 읽히도록 이미지와 타이포그래피의 밀도를 조절했습니다.
+          각 포스터는 서로 다른 주제를 담되, 명확한 시선의 흐름을 유지합니다.</p>
+      </aside>
+    </section>
+
+    <!-- =========================
+         BANNER DESIGNS
+    ========================== -->
+    <section class="banner-designs" id="banners" aria-labelledby="banner-designs-title">
+      <header class="banner-designs__intro">
+        <h2 id="banner-designs-title">Banner Designs</h2>
+        <p class="banner-designs__subtitle">Soft Touch, Clear Message</p>
+        <div class="banner-designs__description">
+          <p>Hero배너를 1920×700px 사이즈로 제작하여 사용자에게 친근하게 다가가는 디자인을 목표로, 따스한 감성과 아기자기한 요소를 조화롭게 담아냈습니다.
+            시각적인 즐거움뿐만 아니라 브랜드의 핵심 메시지가 사용자에게 가장 쉽고 부드럽게 전달될 수 있도록 배치했습니다.</p>
+        </div>
+      </header>
+
+      <div class="banner-carousel" aria-roledescription="carousel" aria-label="배너 디자인 슬라이더">
+        <div class="banner-carousel__viewport" tabindex="0">
+          <div class="banner-carousel__track">
+            <article class="banner-card" aria-label="배너 디자인 1">
+              <div class="banner1"><img src="./img/Banner1.png" alt="Warm Welcome 배너"></div>
+            </article>
+            <article class="banner-card" aria-label="배너 디자인 2">
+              <div class="banner2"><img src="./img/Banner2.png" alt="Little Moments 배너"></div>
+            </article>
+            <article class="banner-card" aria-label="배너 디자인 3">
+              <div class="banner3"><img src="./img/Banner3.png" alt="New Season Edit 배너"></div>
+            </article>
+            <article class="banner-card" aria-label="배너 디자인 4">
+              <div class="banner4"><img src="./img/Banner4.png" alt="Everyday Delight 배너"></div>
+            </article>
+            <article class="banner-card" aria-label="배너 디자인 5">
+              <div class="banner5"><img src="./img/Banner5.png" alt="Gentle Connection 배너"></div>
+            </article>
+          </div>
+        </div>
+        <div class="banner-carousel__pagination" aria-label="배너 슬라이드 상태">
+          <span class="is-active" aria-label="1번 배너"></span>
+          <span aria-label="2번 배너"></span>
+          <span aria-label="3번 배너"></span>
+          <span aria-label="4번 배너"></span>
+          <span aria-label="5번 배너"></span>
+        </div>
+      </div>
+    </section>
+
+
+
+
+
+    <!-- =========================
+         DETAIL PAGE DESIGNS
+    ========================== -->
+    <section class="detail-designs" id="detail-pages" aria-labelledby="detail-designs-title">
+      <header class="detail-designs__intro">
+        <h2 id="detail-designs-title">Detail Page Designs</h2>
+        <p class="detail-designs__subtitle">Details Make the Difference</p>
+        <div class="detail-designs__description">
+          <p>제품의 특징과 브랜드 이미지를 효과적으로 전달하기 위해 정보 구조와 시각적인 흐름을 고려한 상세페이지 디자인입니다.</p>
+        </div>
+      </header>
+
+      <!-- 상세페이지 썸네일 -->
+      <div class="detail-designs__grid">
+        <article class="detail-card">
+          <button class="detail-card__trigger" type="button" aria-expanded="false" aria-controls="detailModal"
+            data-detail-target="detail-project-01">
+            <span class="detail-card__image"><img src="./img/serum-ss.png" alt="serum Detail"></span>
+            <span class="sr-only">Moisture Serum 상세페이지</span>
+          </button>
+          <div class="detail-card__copy">
+            <h3>Moisture Serum 상세페이지</h3>
+            <p>히알루론산 3중 복합체의 빠른 보습감을 중심으로,
+              맑고 촉촉한 세럼의 이미지를 시각적으로 표현했습니다.</p>
+          </div>
+        </article>
+        <article class="detail-card">
+          <button class="detail-card__trigger" type="button" aria-expanded="false" aria-controls="detailModal"
+            data-detail-target="detail-project-02">
+            <span class="detail-card__image"><img src="./img/lalasweet-ss.png" alt="LALASWEET 상세페이지"></span>
+            <span class="sr-only">LALASWEET 상세페이지</span>
+          </button>
+          <div class="detail-card__copy">
+            <h3>LALASWEET 상세페이지</h3>
+            <p>미니컵의 간편함과 망고·말차의 풍부한 맛을 중심으로
+              부드럽고 따뜻한 브랜드 이미지를 표현했습니다.</p>
+          </div>
+        </article>
+        <article class="detail-card">
+          <button class="detail-card__trigger" type="button" aria-expanded="false" aria-controls="detailModal"
+            data-detail-target="detail-project-03">
+            <span class="detail-card__image"><img src="./img/apple-watch-ss.png" alt="APPLE WATCH 상세페이지"></span>
+            <span class="sr-only">APPLE WATCH 상세페이지</span>
+          </button>
+          <div class="detail-card__copy">
+            <h3>APPLE WATCH 상세페이지</h3>
+            <p>연락·운동·건강 관리 등 손목 위에서 이어지는 주요 기능을 중심으로
+              스마트한 일상과 활동적인 제품 이미지를 표현했습니다.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <div class="detail-modal" id="detailModal" role="dialog" aria-modal="true" aria-label="상세페이지 미리보기" hidden>
+      <div class="detail-modal__backdrop" data-detail-close></div>
+      <div class="detail-modal__panel">
+        <button class="detail-modal__close" type="button" aria-label="상세페이지 닫기" data-detail-close>×</button>
+        <div class="detail-modal__scroll" tabindex="-1">
+          <article class="detail-page" id="detail-project-01" hidden>
+            <img class="detail-page__full-image" src="./img/serum-detail.jpeg" alt="Serum Detail Page">
+          </article>
+          <article class="detail-page" id="detail-project-02" hidden>
+            <img class="detail-page__full-image" src="./img/lalasweet-detail.jpg" alt="Lalasweet Detail Page">
+          </article>
+          <article class="detail-page" id="detail-project-03" hidden>
+            <img class="detail-page__full-image" src="./img/apple-watch-detail.jpeg" alt="Apple Watch Detail Page">
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <!-- =========================
+         DESIGN
+    ========================== -->
+    <!-- <section class="works" id="design" aria-labelledby="works-title">
+
+      <div class="works__header">
+
+        <div>
+
+          <p class="section-kicker">
+            SELECTED WORKS
+          </p>
+
+          <h2 id="works-title">
+            DESIGN ARCHIVE
+          </h2>
+
+        </div>
+
+
+        <div class="works__controls">
+
+          <button class="works__button works__button--prev" type="button" aria-label="이전 작업 보기">
+            ←
+          </button>
+
+          <button class="works__button works__button--next" type="button" aria-label="다음 작업 보기">
+            →
+          </button>
+
+        </div>
+
+      </div>
+
+
+      <div class="works__slider" tabindex="0" aria-label="디자인 작업 슬라이드">
+
+        <article class="work-card" id="banner-card">
+
+          <div class="work-card__placeholder">
+            <span>IMAGE 01</span>
+          </div>
+
+          <div class="work-card__info">
+            <span>01</span>
+
+            <h3>BANNER DESIGN</h3>
+
+            <p>
+              Digital Campaign · Web
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="work-card" id="poster-card">
+
+          <div class="work-card__placeholder">
+            <span>IMAGE 02</span>
+          </div>
+
+          <div class="work-card__info">
+            <span>02</span>
+
+            <h3>POSTER DESIGN</h3>
+
+            <p>
+              Graphic · Print
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="work-card" id="popups">
+
+          <div class="work-card__placeholder">
+            <span>IMAGE 03</span>
+          </div>
+
+          <div class="work-card__info">
+            <span>03</span>
+
+            <h3>POPUP DESIGN</h3>
+
+            <p>
+              UI · Promotion
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="work-card">
+
+          <div class="work-card__placeholder">
+            <span>IMAGE 04</span>
+          </div>
+
+          <div class="work-card__info">
+            <span>04</span>
+
+            <h3>DETAIL PAGE</h3>
+
+            <p>
+              Commerce · Contents
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="work-card" id="projects">
+
+          <div class="work-card__placeholder">
+            <span>IMAGE 05</span>
+          </div>
+
+          <div class="work-card__info">
+            <span>05</span>
+
+            <h3>WEB PROJECT</h3>
+
+            <p>
+              Responsive · Publishing
+            </p>
+          </div>
+
+        </article>
+
+
+        <article class="work-card work-card--linked">
+
+          <a class="work-card__link" href="#lumora-project" aria-label="LUMORA 가구 브랜드 개인 웹 프로젝트 상세 보기">
+
+            <div class="work-card__placeholder work-card__placeholder--image">
+              <img src="./img/lumora-collection-page.jpg" alt="LUMORA 가구 브랜드 웹사이트 컬렉션 화면">
+            </div>
+
+            <div class="work-card__info">
+              <span>06</span>
+
+              <h3>LUMORA</h3>
+
+              <p>
+                Furniture Brand · Personal Project
+              </p>
+            </div>
+
+          </a>
+
+        </article>
+
+      </div>
+
+
+      <p class="works__hint">
+        DRAG OR SWIPE TO EXPLORE
+        <span>→</span>
+      </p>
+
+    </section> -->
+
+
+    <header class="web-designs__intro" aria-labelledby="web-designs-title">
+      <div class="motion-rabbit motion-rabbit--web" aria-hidden="true">
+        <div class="motion-rabbit__peek"><img src="./img/rabbit-peek.png" alt="" width="1254" height="1254" loading="lazy" decoding="async"></div>
+      </div>
+
+      <div class="web-designs__content">
+        <h2 id="web-designs-title">WEB PROJECTS</h2>
+        <p class="web-designs__description">
+          사용자의 흐름을 고려한 구조와 직관적인 인터페이스를 바탕으로,<brclass="web-designs__desktop-break">
+          브랜드의 분위기와 목적이 자연스럽게 전달되도록 웹페이지를 디자인했습니다.
+        </p>
+        <p class="web-designs__label">PROJECTS</p>
+        <div class="web-designs__project">
+          <p class="web-designs__project-type"></p>
+          <h3>Personal Project <br> LUMOLA Responsive Website</h3>
+          <p class="web-designs__project-description">
+            LUMOLA는 따뜻한 공간과 감성적인 가구의 분위기를 전달하는 것을 목표로 제작했습니다.<br class="web-designs__desktop-break">
+            메인부터 상품 탐색, 상세페이지까지 자연스럽게 이어지는 사용자 흐름과 반응형 레이아웃을 고려한 가구 웹사이트입니다.
+          </p>
+        </div>
+      </div>
+    </header>
+    <!-- =========================
+         LUMORA PERSONAL PROJECT
+    ========================== -->
+    <section class="lumora-project" id="lumora-project" aria-labelledby="lumora-project-title">
+      <!-- 01 / Project intro -->
+      <header class="lumora-scene lumora-intro">
+        <div class="lumora-container">
+          <!-- <p class="lumora-kicker" data-lumora-reveal>01 / PROJECT INTRO</p> -->
+          <div class="lumora-intro__heading" data-lumora-reveal>
+            <h2 id="lumora-project-title">LUMORA</h2>
+            <p>가구를 고르는 순간도,<br>편안한 경험이 되도록.</p>
+          </div>
+          <div class="lumora-intro__summary" data-lumora-reveal>
+            <p>자연의 온기를 담은 가구 브랜드 웹사이트.<br>공간의 분위기에서 제품의 발견까지, 하나의 흐름으로 연결했습니다.</p>
+            <a class="lumora-button" href="./projects/lumora/index.html" target="_blank" rel="noopener">사이트 직접 보기 <span
+                aria-hidden="true">↗</span></a>
+          </div>
+          <figure class="lumora-intro__visual" data-lumora-reveal>
+            <picture>
+              <source media="(max-width: 600px)" srcset="./projects/lumora/img/heromo1%20.jpg">
+              <img src="./projects/lumora/img/heropc1.jpg" alt="햇빛과 원목, 크림색 가구가 어우러진 LUMORA의 브랜드 비주얼" width="1920"
+                height="810" loading="lazy">
+            </picture>
+          </figure>
+          <dl class="lumora-intro__facts">
+            <div>
+              <dt>참여</dt>
+              <dd>기획 · UI 디자인 · 퍼블리싱</dd>
+            </div>
+            <div>
+              <dt>구현</dt>
+              <dd>HTML · CSS · JavaScript</dd>
+            </div>
+            <div>
+              <dt>환경</dt>
+              <dd>PC · Tablet · Mobile</dd>
+            </div>
+          </dl>
+        </div>
+      </header>
+
+      <!-- 02 / Live preview -->
+      <article class="lumora-scene lumora-scene--white lumora-preview-scene" id="lumora-main"
+        aria-labelledby="lumora-main-title">
+        <div class="lumora-container">
+          <div class="lumora-heading" data-lumora-reveal>
+            <!-- <p class="lumora-kicker">02 / LIVE PREVIEW</p> -->
+            <h3 id="lumora-main-title">분위기로 시작해,<br><em>경험으로 이어지도록.</em></h3>
+            <p class="lumora-lead">지금, 화면 안에서 LUMORA를 둘러보세요.<br>메뉴를 누르고 상품을 살펴보며 기기별 화면도 바꿔볼 수 있습니다.</p>
+          </div>
+          <div class="lumora-live" id="lumora-live">
+            <div class="lumora-live__toolbar">
+              <span class="lumora-live__status"><i aria-hidden="true"></i> LIVE PREVIEW</span>
+              <div class="lumora-live__devices" role="tablist" aria-label="미리보기 기기 선택">
+                <button type="button" role="tab" id="lumora-device-desktop" data-device="desktop"
+                  aria-controls="lumora-live-panel" aria-selected="true">PC <span>1440</span></button>
+                <button type="button" role="tab" id="lumora-device-tablet" data-device="tablet"
+                  aria-controls="lumora-live-panel" aria-selected="false" tabindex="-1">PAD <span>820</span></button>
+                <button type="button" role="tab" id="lumora-device-mobile" data-device="mobile"
+                  aria-controls="lumora-live-panel" aria-selected="false" tabindex="-1">MO <span>390</span></button>
+              </div>
+              <a id="lumora-open-page" href="./projects/lumora/index.html" target="_blank" rel="noopener"
+                aria-label="현재 미리보기 페이지 새 탭에서 열기">새 탭에서 보기 ↗</a>
+            </div>
+            <div class="lumora-live__browserbar">
+              <div class="lumora-live__pages" role="group" aria-label="미리보기 페이지 선택">
+                <button type="button" data-page="home" aria-pressed="true">Home</button>
+                <button type="button" data-page="collection" aria-pressed="false">Collection</button>
+                <button type="button" data-page="product" aria-pressed="false">Product</button>
+              </div>
+              <span id="lumora-page-label">브랜드 홈</span>
+              <button type="button" id="lumora-reload" aria-label="미리보기 새로고침">↻</button>
+            </div>
+            <div id="lumora-live-panel" role="tabpanel" aria-labelledby="lumora-device-desktop">
+              <div class="lumora-live__stage" id="lumora-frame-stage">
+                <div class="lumora-live__shell" id="lumora-frame-shell">
+                  <iframe id="lumora-live-frame" src="./projects/lumora/index.html?embed=1"
+                    title="LUMORA 브랜드 홈 · 실제 사이트 미리보기" loading="lazy"></iframe>
+                </div>
+              </div>
+            </div>
+            <div class="lumora-live__foot">
+              <p id="lumora-device-description" aria-live="polite">PC · 공간을 넓게, 탐색은 한눈에.</p>
+              <span id="lumora-viewport-size">1440 × 900</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- 03 / Brand & design concept -->
+      <article class="lumora-scene lumora-concept" id="lumora-ui" aria-labelledby="lumora-ui-title">
+        <div class="lumora-container">
+          <div class="lumora-heading" data-lumora-reveal>
+            <!-- <p class="lumora-kicker">03 / BRAND &amp; DESIGN CONCEPT</p> -->
+            <h3 id="lumora-ui-title">자연의 질감에서,<br><em>화면의 온도까지.</em></h3>
+            <p class="lumora-lead">따뜻한 색, 여유 있는 간격, 담백한 글자.<br>가구와 공간이 가장 먼저 보이도록 디자인했습니다.</p>
+          </div>
+          <div class="lumora-concept__grid">
+            <figure class="lumora-concept__image" data-lumora-reveal>
+              <img src="./projects/lumora/img/bad5.png" alt="자연광 아래 원목과 패브릭의 질감이 드러나는 LUMORA 침실" width="1254"
+                height="1254" loading="lazy">
+            </figure>
+            <div class="lumora-concept__words" data-lumora-reveal>
+              <div>
+                <h4>Warm.</h4>
+                <p>햇살을 닮은 크림과 베이지</p>
+              </div>
+              <div>
+                <h4>Natural.</h4>
+                <p>나무와 패브릭, 있는 그대로의 질감</p>
+              </div>
+              <div>
+                <h4>Timeless.</h4>
+                <p>오래 머물러도 편안한 균형</p>
+              </div>
+            </div>
+          </div>
+          <div class="lumora-palette" aria-label="LUMORA 디자인 색상" data-lumora-reveal>
+            <div class="lumora-palette__cream"><span>Cream</span></div>
+            <div class="lumora-palette__white"><span>White</span></div>
+            <div class="lumora-palette__beige"><span>Warm Beige</span></div>
+            <div class="lumora-palette__brown"><span>Brown</span></div>
+            <div class="lumora-palette__olive"><span>Muted Olive</span></div>
+          </div>
+          <div class="lumora-concept__principles" data-lumora-reveal>
+            <p><strong>공간이 먼저</strong><span>큰 이미지로 전하는 첫인상</span></p>
+            <p><strong>탐색은 명확하게</strong><span>일관된 상품 정보와 시선의 흐름</span></p>
+            <p><strong>선택은 편안하게</strong><span>상세 정보에서 구매 체험까지</span></p>
+          </div>
+        </div>
+      </article>
+
+      <!-- 04 / Key screens -->
+      <article class="lumora-scene lumora-scene--white lumora-screens" id="lumora-screens"
+        aria-labelledby="lumora-screens-title">
+        <div class="lumora-container">
+          <div class="lumora-heading" data-lumora-reveal>
+            <p class="lumora-kicker">04 / KEY SCREENS</p>
+            <h3 id="lumora-screens-title">발견에서 선택까지,<br><em>자연스럽게 이어지는 화면.</em></h3>
+            <p class="lumora-lead">브랜드를 만나고, 취향을 찾고, 제품을 자세히 보는 세 가지 장면.</p>
+          </div>
+          <!-- 실제 사이트 스크린샷: 아래 img 파일만 교체하면 소개 화면이 갱신됩니다. -->
+          <div class="lumora-screen lumora-screen--home" id="lumora-home-screen">
+            <div class="lumora-screen__copy" data-lumora-reveal>
+              <h4>Home</h4>
+              <p class="lumora-screen__title">우리 집에 들이고 싶은<br>분위기를 만나다.</p>
+              <p>공간을 채우는 큰 비주얼로 시작해<br>가구와 라이프스타일로 시선을 이어갑니다.</p>
+              <button class="lumora-text-link" type="button" data-try-page="home">홈 화면 체험하기 <span
+                  aria-hidden="true">↗</span></button>
+            </div>
+            <figure class="lumora-screen__visual" data-lumora-reveal>
+              <div class="lumora-screen__browser" aria-hidden="true"><span>● ● ●</span><span>LUMORA / HOME</span></div>
+              <img src="./img/lumora-screen-home.jpg" alt="LUMORA 홈 화면: 브랜드 메인 비주얼과 가구 카테고리, 신상품 목록" width="1440"
+                height="1900" loading="lazy">
+            </figure>
+          </div>
+          <div class="lumora-screen lumora-screen--collection" id="lumora-collection">
+            <div class="lumora-screen__copy" data-lumora-reveal>
+              <h4>Collection</h4>
+              <p class="lumora-screen__title">하나씩 살펴보며,<br>나의 취향을 발견하다.</p>
+              <p>사진과 정보의 간격을 고르게 맞춰<br>가구 하나하나에 집중할 수 있도록.</p>
+              <button class="lumora-text-link" type="button" data-try-page="collection">컬렉션 체험하기 <span
+                  aria-hidden="true">↗</span></button>
+            </div>
+            <figure class="lumora-screen__visual" data-lumora-reveal>
+              <div class="lumora-screen__browser" aria-hidden="true"><span>● ● ●</span><span>LUMORA / COLLECTION</span>
+              </div>
+              <img src="./img/lumora-screen-collection.jpg" alt="LUMORA 컬렉션 화면: 침실 비주얼과 가구 상품 목록" width="1440"
+                height="1800" loading="lazy">
+            </figure>
+          </div>
+          <div class="lumora-screen lumora-screen--product" id="lumora-detail">
+            <div class="lumora-screen__copy" data-lumora-reveal>
+              <h4>Product</h4>
+              <p class="lumora-screen__title">마음에 든 가구를,<br>조금 더 가까이.</p>
+              <p>소재와 형태를 살피는 갤러리부터<br>가격과 배송 정보, 장바구니 체험까지.</p>
+              <button class="lumora-text-link" type="button" data-try-page="product">상세 화면 체험하기 <span
+                  aria-hidden="true">↗</span></button>
+            </div>
+            <figure class="lumora-screen__visual" data-lumora-reveal>
+              <div class="lumora-screen__browser" aria-hidden="true"><span>● ● ●</span><span>LUMORA / PRODUCT</span>
+              </div>
+              <img src="./img/lumora-screen-product.jpg" alt="LUMORA 상품 상세 화면: 헤이든 원목 침대 갤러리, 가격과 구매 정보" width="1440"
+                height="1850" loading="lazy">
+            </figure>
+          </div>
+        </div>
+      </article>
+
+      <!-- 05 / Responsive design -->
+      <article class="lumora-scene lumora-responsive" id="lumora-responsive" aria-labelledby="lumora-responsive-title">
+        <div class="lumora-container">
+          <div class="lumora-heading lumora-heading--center" data-lumora-reveal>
+            <h3 id="lumora-responsive-title">화면은 달라도,<br><em>같은 편안함.</em></h3>
+            <p class="lumora-lead">넓은 모니터에서도, 손안의 작은 화면에서도.<br>화면에 맞는 이미지와 배치로 LUMORA의 분위기를 이어갑니다.</p>
+          </div>
+          <div class="lumora-device-stage" data-lumora-reveal>
+            <figure class="lumora-device lumora-device--desktop">
+              <div class="lumora-device__frame"><img src="./img/lumora-device-pc.jpg" alt="1440px PC에서 보이는 LUMORA 홈 화면"
+                  width="1440" height="1000" loading="lazy"></div>
+            </figure>
+            <figure class="lumora-device lumora-device--tablet">
+              <div class="lumora-device__frame"><img src="./img/lumora-device-tablet.jpg"
+                  alt="820px 태블릿에서 보이는 LUMORA 홈 화면" width="820" height="1080" loading="lazy"></div>
+            </figure>
+            <figure class="lumora-device lumora-device--mobile">
+              <div class="lumora-device__frame"><img src="./img/lumora-device-mobile.jpg"
+                  alt="390px 모바일에서 보이는 LUMORA 홈 화면" width="390" height="844" loading="lazy"></div>
+            </figure>
+          </div>
+          <div class="lumora-device-links" aria-label="기기별 실제 화면 체험">
+            <button type="button" data-try-page="home" data-try-device="desktop"><span>PC</span><span>1440 <b
+                  aria-hidden="true">↗</b></span></button>
+            <button type="button" data-try-page="home" data-try-device="tablet"><span>Tablet</span><span>820 <b
+                  aria-hidden="true">↗</b></span></button>
+            <button type="button" data-try-page="home" data-try-device="mobile"><span>Mobile</span><span>390 <b
+                  aria-hidden="true">↗</b></span></button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 06 / Explore LUMORA -->
+      <footer class="lumora-scene lumora-scene--white lumora-explore" aria-labelledby="lumora-explore-title">
+        <div class="lumora-container" data-lumora-reveal>
+          <!-- <p class="lumora-kicker">06 / EXPLORE LUMORA</p> -->
+          <h3 id="lumora-explore-title">당신의 공간에,<br><em>새로운 영감을.</em></h3>
+          <p class="lumora-lead">이제 LUMORA에서 직접 만나보세요.</p>
+          <a class="lumora-button lumora-button--large" href="./projects/lumora/index.html" target="_blank"
+            rel="noopener">LUMORA 둘러보기 <span aria-hidden="true">↗</span></a>
+          <a class="lumora-explore__back" href="#lumora-live">미리보기로 돌아가기 ↑</a>
+        </div>
+      </footer>
+    </section>
+
+
+
+    <!-- =========================
+         WORK / EXPERIENCE
+    ========================== -->
+    <section class="experience" id="career">
+      <div class="motion-marquee" aria-hidden="true">
+        <div class="motion-marquee__track">
+          <span>WEB DESIGN — UI/UX — GRAPHIC DESIGN — PORTFOLIO —&nbsp;</span>
+          <span>WEB DESIGN — UI/UX — GRAPHIC DESIGN — PORTFOLIO —&nbsp;</span>
+        </div>
+      </div>
+      <div class="motion-rabbit motion-rabbit--career" aria-hidden="true">
+        <div class="motion-rabbit__peek"><img src="./img/rabbit-peek.png" alt="" width="1254" height="1254" loading="lazy" decoding="async"></div>
+      </div>
+
+      <p class="section-kicker">
+        EXPERIENCE & PROJECT
+      </p>
+
+      <h2>
+        WORK
+      </h2>
+
+      <div class="experience__grid">
+
+        <article>
+          <span>01</span>
+
+          <h3>WEB DESIGN STUDY</h3>
+
+          <p>
+            웹디자인과 퍼블리싱의 기본기를 학습하며
+            다양한 개인 작업을 진행했습니다.
+          </p>
+        </article>
+
+
+        <article>
+          <span>02</span>
+
+          <h3>TEAM PROJECT</h3>
+
+          <p>
+            기획부터 디자인, 퍼블리싱까지
+            팀원들과 역할을 나누어 웹사이트를 제작했습니다.
+          </p>
+        </article>
+
+
+        <article>
+          <span>03</span>
+
+          <h3>PERSONAL PROJECT</h3>
+
+          <p>
+            브랜드 분석과 콘텐츠 기획을 바탕으로
+            개인 웹사이트 프로젝트를 제작했습니다.
+          </p>
+        </article>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+    <section class="contact" id="contact">
+
+      <p class="section-kicker">
+        CONTACT
+      </p>
+
+      <h2>
+        LET'S CREATE<br>
+        SOMETHING NICE.
+      </h2>
+
+      <p class="contact__text">
+        좋은 디자인과 새로운 경험을 만들어갈 기회를 기다리고 있습니다.<br>
+        함께할 수 있는 기회가 있다면 편하게 연락 주세요.
+      </p>
+
+
+      <div class="contact__links">
+
+        <a href="mailto:your@email.com">
+          EMAIL
+          <span>↗</span>
+        </a>
+
+        <a href="#">
+          RESUME
+          <span>↗</span>
+        </a>
+
+        <a href="#">
+          GITHUB
+          <span>↗</span>
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <script>
+
+    /* =========================
+       DESIGN SLIDER
+    ========================== */
+
+    (() => {
+    const slider = document.querySelector('.works__slider');
+    if (!slider) return;
+
+    const scrollSlide = (direction) => {
+
+      const card = slider.querySelector('.work-card');
+
+      const gap =
+        parseFloat(getComputedStyle(slider).gap) || 0;
+
+      slider.scrollBy({
+        left: direction * (card.offsetWidth + gap),
+        behavior: 'smooth'
+      });
+
+    };
+
+
+    document
+      .querySelector('.works__button--prev')
+      .addEventListener(
+        'click',
+        () => scrollSlide(-1)
+      );
+
+
+    document
+      .querySelector('.works__button--next')
+      .addEventListener(
+        'click',
+        () => scrollSlide(1)
+      );
+
+
+
+    let isDragging = false;
+
+    let dragStartX = 0;
+
+    let dragStartScroll = 0;
+
+    let hasDragged = false;
+
+
+
+    slider.addEventListener(
+      'pointerdown',
+      (event) => {
+
+        isDragging = true;
+
+        dragStartX = event.clientX;
+
+        dragStartScroll = slider.scrollLeft;
+
+        hasDragged = false;
+
+        slider.setPointerCapture(
+          event.pointerId
+        );
+
+        slider.classList.add(
+          'is-dragging'
+        );
+
+      }
+    );
+
+
+
+    slider.addEventListener(
+      'pointermove',
+      (event) => {
+
+        if (!isDragging) return;
+
+        if (Math.abs(event.clientX - dragStartX) > 6) {
+          hasDragged = true;
+        }
+
+        slider.scrollLeft =
+          dragStartScroll -
+          (event.clientX - dragStartX);
+
+      }
+    );
+
+
+
+    const stopDragging = () => {
+
+      isDragging = false;
+
+      slider.classList.remove(
+        'is-dragging'
+      );
+
+    };
+
+
+    slider.addEventListener(
+      'pointerup',
+      stopDragging
+    );
+
+    slider.addEventListener(
+      'pointercancel',
+      stopDragging
+    );
+
+
+    slider.addEventListener(
+      'click',
+      (event) => {
+        if (!hasDragged) return;
+
+        event.preventDefault();
+        hasDragged = false;
+      },
+      true
+    );
+    })();
+
+  </script>
+
+</body>
+</html>

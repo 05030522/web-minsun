@@ -1,0 +1,54 @@
+/* An isolated, clipped decoration: no changes to the existing content layout. */
+.about-rabbit-window {
+  position: absolute;
+  top: var(--about-rabbit-top, 0px);
+  right: 0;
+  width: var(--about-rabbit-window-width, 0px);
+  height: var(--about-rabbit-height, 0px);
+  overflow: clip;
+  pointer-events: none;
+  user-select: none;
+}
+
+.about-rabbit-peek {
+  position: absolute;
+  top: 50%;
+  right: calc(var(--about-rabbit-size) * -.28);
+  display: block;
+  width: var(--about-rabbit-size);
+  max-width: none;
+  height: auto;
+  margin-top: calc(var(--about-rabbit-size) * -.5);
+  rotate: -90deg;
+  opacity: 0;
+  transform: translateX(110%) rotate(6deg);
+}
+
+.about-rabbit-window.is-revealed .about-rabbit-peek {
+  opacity: 1;
+  transform: translateX(0) rotate(0);
+  animation:
+    about-rabbit-enter 1.65s cubic-bezier(.22, .7, .2, 1) both,
+    about-rabbit-float 4.6s ease-in-out 1.65s infinite;
+}
+
+/* Translate uses page axes; the independent rotate turns the PNG sideways. */
+@keyframes about-rabbit-enter {
+  0% { opacity: 0; translate: 110% 0; transform: rotate(6deg); }
+  38% { opacity: 1; translate: 40% 0; transform: rotate(3deg); }
+  82% { opacity: 1; translate: -2% 0; transform: rotate(-1deg); }
+  100% { opacity: 1; translate: 0 0; transform: rotate(0); }
+}
+
+@keyframes about-rabbit-float {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -4px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-rabbit-window.is-revealed .about-rabbit-peek {
+    animation: none;
+    translate: none;
+    transform: none;
+  }
+}

@@ -822,6 +822,26 @@ dialog {
 dialog::backdrop {
     background:rgb(0 0 0 / .55)
 }
+body.dialog-open { overflow:hidden; }
+.benefit-dialog { width:600px; }
+.benefit-dialog .dialog-head h2 { font-size:clamp(20px,3vw,25px); }
+.close-dialog { flex:none; }
+.dialog-period { color:var(--gray); margin-bottom:24px; }
+.benefit-table { width:100%; border-collapse:collapse; table-layout:fixed; }
+.benefit-table caption { text-align:left; font-weight:600; margin-bottom:12px; }
+.benefit-table th,.benefit-table td { padding:16px 12px; border-bottom:1px solid var(--line); text-align:left; overflow-wrap:anywhere; }
+.benefit-table thead { background:#f5f5f5; }
+.benefit-table tbody th { font-weight:500; }
+.benefit-details { margin:0; }
+.benefit-details>div { display:grid; grid-template-columns:80px 1fr; gap:16px; padding:20px 0; border-bottom:1px solid var(--line); }
+.benefit-details dt { font-weight:600; }
+.dialog-primary { display:block; margin-top:24px; padding:14px 16px; background:var(--ink); color:#fff; text-align:center; }
+.dialog-note { margin-top:20px; color:var(--gray); font-size:13px; line-height:1.6; }
+.delivery-section { padding:20px 0; border-top:1px solid var(--line); }
+.delivery-section h3 { margin:0 0 12px; font-size:16px; }
+.delivery-section ul { padding-left:18px; list-style:disc; line-height:1.7; }
+.delivery-section li+li { margin-top:6px; }
+.review-actions button[aria-pressed=true] { font-weight:700; }
 .dialog-head {
     display:flex;
     justify-content:space-between;

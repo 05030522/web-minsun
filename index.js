@@ -1,12 +1,15 @@
 const text = document.getElementById("contents-title");
+const portfolioReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+const portfolioMouse = window.matchMedia("(hover: hover) and (pointer: fine)");
 
 document.addEventListener("mousemove", (e) => {
+  if (!text || portfolioReducedMotion.matches || !portfolioMouse.matches || window.innerWidth <= 900) return;
 
   const x =
-    (e.clientX / window.innerWidth - 0.5) * 15;
+    (e.clientX / window.innerWidth - 0.5) * 2;
 
   const y =
-    (e.clientY / window.innerHeight - 0.5) * -15;
+    (e.clientY / window.innerHeight - 0.5) * -2;
 
   text.style.transform =
     `rotateX(${y}deg) rotateY(${x}deg)`;
@@ -78,7 +81,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function moveTrack(animate = true) {
-    track.style.transition = animate ? "transform 1.5s ease" : "none";
+    track.style.transition = animate && !portfolioReducedMotion.matches ? "transform 1.5s ease" : "none";
     const activeSlide = slides[visualIndex];
     const isMobilePopup = window.matchMedia("(max-width: 700px)").matches;
     const mobileCenterOffset = isMobilePopup
@@ -107,6 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     moveTrack(true);
     updateProject();
+    if (portfolioReducedMotion.matches) settleSlide();
   }
 
   function openProject(card) {
@@ -137,6 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   function autoStart() {
     clearInterval(timer);
+    if (portfolioReducedMotion.matches || (modal && !modal.hidden)) return;
     timer = setInterval(() => {
       moveSlide(1);
     }, 4000);
@@ -181,10 +186,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (event.key === "Escape") closeProject();
   });
 
-  track.addEventListener("transitionend", (event) => {
-    // 카드의 transform 전환 이벤트는 버블링되므로, 트랙 이동이 끝났을 때만 처리합니다.
-    if (event.target !== track || event.propertyName !== "transform") return;
-
+  function settleSlide() {
     if (visualIndex === cloneCount + originalCards.length) {
       visualIndex = cloneCount;
       moveTrack(false);
@@ -194,6 +196,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     isAnimating = false;
+  }
+
+  track.addEventListener("transitionend", (event) => {
+    // 카드의 transform 전환 이벤트는 버블링되므로, 트랙 이동이 끝났을 때만 처리합니다.
+    if (event.target !== track || event.propertyName !== "transform") return;
+    settleSlide();
+  });
+  portfolioReducedMotion.addEventListener("change", () => {
+    if (portfolioReducedMotion.matches) { settleSlide(); moveTrack(false); }
+    autoStart();
   });
 
   window.addEventListener("resize", () => {
@@ -275,6 +287,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const duration = 700;
 
     stopAnimation();
+    if (portfolioReducedMotion.matches) {
+      viewport.scrollLeft = target;
+      onComplete?.();
+      return;
+    }
     isAnimating = true;
     viewport.classList.add("is-settling");
     const animate = (now) => {
@@ -363,7 +380,18 @@ document.addEventListener("DOMContentLoaded", () => {
   viewport.addEventListener("pointerup", finishDrag);
   viewport.addEventListener("pointercancel", finishDrag);
   viewport.addEventListener("dragstart", (event) => event.preventDefault());
-  window.setInterval(advanceSlide, 4000);
+  let bannerTimer;
+  const syncBannerMotion = () => {
+    window.clearInterval(bannerTimer);
+    if (portfolioReducedMotion.matches) {
+      stopAnimation();
+      viewport.scrollLeft = getSlideLeft(visualCards[visualIndex]);
+    } else {
+      bannerTimer = window.setInterval(advanceSlide, 4000);
+    }
+  };
+  portfolioReducedMotion.addEventListener("change", syncBannerMotion);
+  syncBannerMotion();
 });
 
 // Detail Page Designs: open the selected long-form detail in a scrollable modal.

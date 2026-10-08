@@ -1,0 +1,1323 @@
+﻿.shop-book {
+    margin-top: 12.25rem;
+    width: 100%;
+}
+
+.shop-book-thumb>figure {
+    border-radius: 1rem;
+    overflow: hidden;
+    line-height: 0;
+    max-width: 350px;
+}
+
+.shop-book-thumb>figure img {
+    object-fit: cover;
+}
+
+.shop-book-upper {
+    margin-bottom: 1.5rem;
+
+}
+
+.shop-book-title,
+.shop-book-wrt-info,
+.review {
+    margin-bottom: 1rem;
+}
+
+.shop-book>.common-frame {
+    display: grid;
+    grid-template-columns: repeat(1, 0.3fr 1fr);
+    gap: 4rem;
+
+}
+
+.shop-book-wrt-info>ul {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+}
+
+.shop-book-wrap {
+    width: 100%;
+}
+
+.shop-book-maintitle {
+    font-weight: var(--fw2);
+}
+
+.shop-book-wrt-info {
+    font-size: var(--fs-body2);
+    color: var(--black-600);
+}
+
+.shop-book-wrt-info>ul>li:nth-of-type(2),
+.shop-book-wrt-info>ul>li:nth-of-type(3) {
+    padding-left: 0.5rem;
+    border-left: 1px solid var(--black-200);
+}
+
+.review {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.review>.review-star {
+    display: flex;
+    gap: 0.25rem;
+}
+
+.review-avr {
+    font-weight: var(--fw2);
+}
+
+.review-reviews {
+    color: var(--black-600);
+    font-size: var(--fs-detail);
+}
+
+.shop-book-lower {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    gap: 3rem;
+}
+
+.shop-book-info-wrap {
+    padding-top: 3rem;
+    border-top: 1px solid var(--black-400);
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+
+.shop-book-price-inner {
+    margin-top: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.shop-book-price-inner>p {
+    color: var(--black-500);
+}
+
+.smart-shop-book-purchase {
+    display: none;
+}
+
+.shop-book-price-inner>span>b {
+    font-size: var(--fs-h4);
+    color: var(--blue-600);
+    margin-right: 0.5rem;
+}
+
+.shop-book-info {
+    display: grid;
+    grid-template-columns: repeat(1, 0.3fr 1fr);
+    gap: 1.5rem;
+}
+
+.shop-book-tbl-title {
+    font-weight: var(--fw2);
+    white-space: nowrap;
+}
+
+.shop-book-caption {
+    color: var(--black-400);
+}
+
+.shop-book-purchase {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background-color: var(--black-0);
+    padding: 2rem 3rem;
+    border-radius: 1rem;
+
+}
+
+.btn-main,
+.btn-sub {
+
+    text-align: center;
+    font-weight: var(--fw2);
+    border-radius: 0.5rem;
+}
+
+.btn-main {
+    width: 100%;
+    font-size: var(--fs-h4);
+    color: var(--black-0);
+    background-color: var(--blue-700);
+    padding: 0.5rem 1rem;
+    white-space: nowrap;
+
+}
+
+.btn-sub-wrap {
+    width: 100%;
+    padding-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    border-top: 1px solid var(--black-300);
+}
+
+.btn-sub {
+    padding: 0.5rem 2rem;
+    background-color: #fff;
+}
+
+.shop-book-intro {
+    margin-top: 3.5rem;
+
+}
+
+.book-intro-title {
+    font-size: var(--fs-h3);
+    font-weight: var(--fw2);
+}
+
+.book-intro-keepread {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.book-intro-keepread span {
+    font-weight: var(--fw2);
+}
+
+.book-intro-keepread img {
+    height: 1.5rem;
+}
+
+.intro-bttm-line {
+    margin-top: 2rem;
+    border-bottom: 1px solid var(--black-200);
+}
+
+.book-intro-caption {
+    margin-top: 2rem;
+    color: var(--black-500);
+    padding-bottom: 2rem;
+    line-height: 1.5;
+}
+
+.stemp-banner {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    margin-top: 2rem;
+    padding: 0;
+}
+
+.st-banner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 100%;
+}
+
+.stp-pc {
+    display: block;
+}
+
+.stp-pad {
+    display: none;
+}
+
+.stp-mo {
+    display: none;
+}
+
+.st-banner figure {
+    margin-top: 2rem;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 0;
+    vertical-align: top;
+}
+
+.st-banner-img,
+.st-banner-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.st-banner-img img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.st-banner-btn img {
+    display: block;
+    width: auto;
+    max-width: none;
+    height: auto;
+    flex-shrink: 0;
+}
+
+/* =========================
+   전체 리뷰 영역
+========================= */
+
+.review-section {
+    margin-top: 3rem;
+    color: #222;
+}
+
+
+/* =========================
+   함께 추가된 책
+========================= */
+
+.review-related-title {
+    margin-bottom: 3rem;
+    font-weight: var(--fw2);
+}
+
+
+.review-related-list {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 2rem;
+    width: 100%;
+}
+
+
+.review-related-book {
+    width: 11.25rem;
+
+    flex: 0 0 auto;
+}
+
+
+.review-related-book img {
+    display: block;
+
+    width: 100%;
+    height: 250px;
+
+    object-fit: contain;
+
+    background: #f7f7f7;
+}
+
+
+.review-related-name {
+    margin-top: 10px;
+
+    overflow: hidden;
+
+    font-size: 13px;
+    line-height: 1.4;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.review-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 50px 0 70px;
+
+    background: #ccc;
+}
+
+
+/* =========================
+   별점
+========================= */
+
+.review-rating-area {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-height: 190px;
+}
+
+
+.review-my-rating {
+    text-align: center;
+}
+
+
+.review-rating-title {
+    margin-bottom: 25px;
+
+    font-size: 24px;
+    font-weight: 700;
+
+    color: #888;
+}
+
+
+.review-stars {
+    display: flex;
+    justify-content: center;
+
+    gap: 16px;
+}
+
+
+.review-star {
+    border: 0;
+    padding: 0;
+
+    background: transparent;
+
+    color: #0784ef;
+    font-size: 54px;
+    line-height: 1;
+
+    cursor: pointer;
+}
+
+
+.review-star.is-active {
+    color: #0784ef;
+}
+
+
+/* 구매자 별점 */
+
+.review-buyer-rating {
+    position: absolute;
+
+    left: 0;
+
+    /* 리뷰 입력창 왼쪽에 위치 */
+    top: calc(100% + 50px);
+    bottom: auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    min-width: 130px;
+}
+
+.review-stars>button img {
+    height: 3rem;
+
+}
+
+.review-buyer-label {
+    margin-bottom: 14px;
+
+    font-size: 14px;
+}
+
+
+.review-buyer-score {
+    margin-bottom: 8px;
+
+    font-size: 20px;
+}
+
+
+.review-buyer-stars img {
+    height: 1rem;
+
+}
+
+
+/* =========================
+   리뷰 입력
+========================= */
+
+.review-write {
+    margin-top: 1.25rem;
+    padding-left: 10rem;
+}
+
+
+.review-write textarea {
+    display: block;
+    box-sizing: border-box;
+    width: 100%;
+    height: 135px;
+
+    padding: 18px;
+
+    border: 1px solid #aaa;
+    border-radius: 12px;
+
+    outline: none;
+
+    resize: none;
+
+    font-family: inherit;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+.review-write textarea:focus {
+    border-color: #555;
+}
+
+
+/* =========================
+   버튼 영역
+========================= */
+
+.review-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 1.25rem;
+    padding-left: 0;
+}
+
+
+.review-warning-btn {
+    padding: 0.5rem 1rem;
+
+    border: 1px solid #aaa;
+    border-radius: 4px;
+
+    background: #fff;
+
+    color: #777;
+
+
+    cursor: pointer;
+}
+
+
+.review-actions-right {
+    display: flex;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+
+.review-spoiler {
+    display: flex;
+    align-items: center;
+
+    gap: 7px;
+
+    color: #777;
+}
+
+
+.review-submit-btn {
+    padding: 1rem 1rem;
+
+    border: 0;
+    border-radius: 3px;
+
+    background: #87a66f;
+    color: #fff;
+
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+/* =========================
+   필터
+========================= */
+
+.review-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-top: 5.6rem;
+    padding: 0 1.25rem 1.5rem;
+
+    border-bottom: 1px solid #999;
+}
+
+
+.review-filter-left,
+.review-sort {
+    display: flex;
+    align-items: center;
+
+    gap: 1.25rem;
+}
+
+
+.review-filter-btn,
+.review-sort-btn {
+    border: 0;
+    padding: 0;
+
+    background: transparent;
+
+    color: #777;
+
+
+    cursor: pointer;
+}
+
+
+.review-filter-btn.is-active,
+.review-sort-btn.is-active {
+    color: #111;
+    font-weight: 700;
+}
+
+
+/* =========================
+   리뷰가 없을 때
+========================= */
+
+.review-empty {
+    padding: 7.5rem 1.25rem;
+
+    text-align: center;
+
+    color: #888;
+}
+
+
+.review-empty p {
+    margin-bottom: 1rem;
+
+}
+
+
+.review-empty strong {
+    font-weight: var(--fw2);
+}
+
+.review-list {
+    order: 6;
+
+    width: 100%;
+}
+
+.review-item {
+    padding: 2rem 1.5rem;
+
+    border-bottom: 1px solid #ddd;
+}
+
+
+.review-item-stars {
+    margin-bottom: 1rem;
+
+    color: #0784ef;
+
+    font-size: 18px;
+}
+
+.review-item-stars span {
+    color: #ddd;
+}
+
+
+.review-item-spoiler {
+    display: inline-block;
+
+    margin-bottom: 10px;
+    padding: 0.25rem 0.5rem;
+
+    border-radius: 3px;
+
+    background: #eee;
+
+    font-size: var(--fs-detail);
+}
+
+
+.review-item-text {
+    line-height: 1.6;
+}
+
+
+@media(max-width:1076px) {
+
+
+    .shop-book>.common-frame {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 auto;
+
+    }
+
+}
+
+@media (max-width:1205px) {
+    .stp-pc {
+        display: none;
+    }
+
+    .stp-pad {
+        display: block;
+    }
+
+    .stp-mo {
+        display: none;
+    }
+}
+
+
+/* 1025px ~ 1720px */
+@media screen and (min-width: 1025px) and (max-width: 1720px) {
+
+    .review-section {
+        width: 100%;
+        margin-top: 3rem;
+        color: #222;
+    }
+
+    .review-write-row {
+        gap: clamp(18px, 2vw, 30px);
+    }
+
+    .review-buyer-rating {
+        flex-basis: clamp(90px, 8vw, 120px);
+    }
+}
+
+@media(max-width:1024px) {
+    .shop-book {
+        margin-top: 10rem;
+        width: 100%;
+    }
+
+    .shop-book-wrap {
+        margin-top: 3rem;
+    }
+
+    .shop-book-lower {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .shop-book-purchase {
+        display: none;
+    }
+
+    .shop-book-price {
+        display: grid;
+        grid-template-columns: 0.8fr 1fr;
+        gap: 2rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .shop-book-price-inner {
+        margin-top: 0;
+    }
+
+
+
+    .smart-shop-book-purchase {
+        display: block;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .smart-shop-book-purchase>a {
+
+        padding: 1rem 1rem;
+        text-align: center;
+        background-color: #fff;
+        border: 1px solid var(--black-300);
+        border-radius: 1rem;
+        align-items: center;
+        font-size: var(--fs-h4);
+    }
+
+    .smart-shop-book-purchase>a:nth-of-type(2) {
+        background-color: var(--blue-700);
+        border: 1px solid var(--black-0);
+        color: #fff;
+        font-weight: var(--fw2);
+    }
+
+    .smart-shop-book-purchase>a>div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+@media (max-width:1000px) {
+    .stp-pc {
+        display: none;
+    }
+
+    .stp-pad {
+        display: block;
+    }
+
+    .stp-mo {
+        display: none;
+    }
+}
+
+@media(max-width:768px) {
+    .shop-book-price {
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2rem;
+        margin-top: 2rem;
+
+    }
+
+
+
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 1024px) {
+
+
+
+
+    /* 책 */
+
+    .review-related-title {
+        margin-bottom: 35px;
+
+        font-size: 16px;
+    }
+
+
+    .review-related-list {
+        gap: 22px;
+    }
+
+
+    .review-related-book {
+        width: calc((100% - 88px) / 5);
+    }
+
+
+    .review-related-book img {
+        height: auto;
+
+        aspect-ratio: 0.68;
+
+        object-fit: contain;
+    }
+
+
+    .review-related-name {
+        font-size: 11px;
+    }
+
+
+    .review-divider {
+        margin: 45px 0 45px;
+    }
+
+
+    /* 별점 */
+
+    .review-rating-area {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        align-items: center;
+        column-gap: 50px;
+
+        width: 100%;
+        min-height: 170px;
+
+        margin-bottom: 35px;
+    }
+
+    .review-my-rating {
+        width: 100%;
+
+        margin: 0;
+        padding: 20px 40px;
+
+        text-align: center;
+
+        border-right: 1px solid #ccc;
+    }
+
+
+    .review-rating-title {
+        margin-bottom: 20px;
+
+        font-size: 24px;
+    }
+
+
+    .review-star {
+        font-size: 48px;
+    }
+
+
+    .review-buyer-rating {
+        position: static;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-width: 0;
+        margin-bottom: 1rem;
+        padding: 1.25rem;
+    }
+
+
+
+
+    /* textarea */
+
+    .review-write {
+        margin-top: 35px;
+        padding-left: 0;
+    }
+
+
+    .review-write textarea {
+        height: 130px;
+    }
+
+
+    .review-filter {
+        margin-top: 60px;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+
+    .review-section {
+        display: flex;
+        flex-direction: column;
+
+    }
+
+    /* =====================
+     함께 추가된 책
+  ===================== */
+
+    .review-related-title {
+        margin-bottom: 25px;
+
+        font-size: 12px;
+    }
+
+
+    .review-related-list {
+        display: grid;
+
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+
+        width: 100%;
+        max-width: none;
+
+        margin: 0;
+
+        column-gap: clamp(8px, 2.5vw, 14px);
+        row-gap: 20px;
+
+        align-items: start;
+    }
+
+
+    .review-related-book {
+        width: 100%;
+        min-width: 0;
+    }
+
+
+    .review-related-book img {
+        display: block;
+
+        width: 100%;
+        height: auto;
+
+        aspect-ratio: 0.68;
+
+        object-fit: contain;
+        object-position: center bottom;
+
+        background: transparent;
+    }
+
+
+    .review-related-name {
+        display: -webkit-box;
+
+        width: 100%;
+
+        margin-top: 5px;
+
+        overflow: hidden;
+
+        font-size: 9px;
+        line-height: 1.3;
+
+        word-break: keep-all;
+
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+    }
+
+
+    .review-divider {
+        margin: 30px 0 30px;
+    }
+
+
+    /* =====================
+   모바일 리뷰 영역
+===================== */
+
+    .review-rating-area {
+        display: contents;
+    }
+
+
+    /* 이 책을 평가해주세요 */
+    .review-my-rating {
+        order: 1;
+
+        width: 100%;
+
+        margin: 0 0 26px;
+        padding: 0;
+
+        text-align: center;
+
+        border: 0;
+    }
+
+    .review-rating-title {
+        margin-bottom: 16px;
+
+        font-size: 16px;
+    }
+
+    .review-stars {
+        display: flex;
+        justify-content: center;
+
+        gap: 8px;
+    }
+
+    .review-star {
+        padding: 0;
+        border: 0;
+
+        background: transparent;
+        color: #0784ef;
+
+        font-size: 25px;
+        line-height: 1;
+    }
+
+
+    /* 리뷰 작성창 */
+    .review-write {
+        order: 2;
+
+        flex: none;
+
+        width: 100%;
+        min-width: 0;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .review-write textarea {
+        display: block;
+
+        width: 100%;
+        height: 118px;
+
+        padding: 13px;
+
+        box-sizing: border-box;
+
+        border: 1px solid #aaa;
+        border-radius: 18px;
+
+        resize: none;
+
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+
+    /* 구매자 별점 */
+    .review-buyer-rating {
+        order: 3;
+
+        position: static;
+
+        display: flex;
+        flex: none;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        width: 100%;
+
+        margin-bottom: 1rem;
+        padding: 0;
+    }
+
+    .review-buyer-label {
+        margin-bottom: 8px;
+
+        font-size: 11px;
+    }
+
+    .review-buyer-score {
+        margin-bottom: 6px;
+
+        font-size: 17px;
+        font-weight: 700;
+    }
+
+
+
+
+    /* 리뷰 작성 유의사항 */
+    .review-actions {
+        order: 4;
+
+        display: grid;
+        grid-template-columns: 1fr auto;
+
+        width: 100%;
+
+        padding: 0;
+    }
+
+    .review-warning-btn {
+        grid-column: 2;
+
+        justify-self: end;
+
+        padding: 0.25rem 0.5rem;
+
+        font-size: var(--fs-detail);
+    }
+
+
+    /* 스포일러 + 리뷰 남기기 */
+    .review-actions-right {
+        grid-column: 1 / 3;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+
+        padding-top: 0.8rem;
+
+
+    }
+
+    .review-spoiler {
+        font-size: var(--fs-detail);
+    }
+
+    .review-submit-btn {
+        padding: 0.5rem 1rem;
+
+        font-size: var(--fs-detail);
+    }
+
+
+    /* 구매자 / 전체 / 정렬 */
+    .review-filter {
+        order: 5;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        width: 100%;
+
+        margin-top: 1.25rem;
+        padding: 0 0 1rem;
+
+        border-bottom: 1px solid #777;
+    }
+
+    .review-filter-left {
+        display: flex;
+
+        gap: 0.5rem
+    }
+
+    .review-sort {
+        display: flex;
+
+        gap: 0.5rem;
+    }
+
+    .review-filter-btn,
+    .review-sort-btn {
+        padding: 0;
+
+        font-size: var(--fs-detail);
+
+        white-space: nowrap;
+    }
+
+
+    /* 리뷰 없음 */
+    .review-list {
+        order: 6;
+
+        width: 100%;
+    }
+
+    .review-empty {
+        padding: 5rem 0.625rem 3.75rem;
+
+        text-align: center;
+    }
+
+    .review-empty p {
+        margin-bottom: 1rem;
+
+        font-size: var(--fs-detail);
+    }
+
+    .review-empty strong {
+        font-size: var(--fs-detail);
+    }
+
+
+
+
+    /******************/
+
+
+
+
+
+    .review-item {
+        padding: 2rem 1.5rem;
+
+        border-bottom: 1px solid #ddd;
+    }
+
+
+    .review-item-stars {
+        margin-bottom: 1rem;
+
+        color: #0784ef;
+
+        font-size: 18px;
+    }
+
+
+    .review-item-stars span {
+        color: #ddd;
+    }
+
+
+    .review-item-spoiler {
+        display: inline-block;
+
+
+        border-radius: 3px;
+
+        background: #eee;
+
+        font-size: 11px;
+    }
+
+
+    .review-item-text {
+        line-height: 1.6;
+    }
+
+
+    .review-write-row {
+        display: flex;
+        align-items: center;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        gap: 35px;
+    }
+
+    .review-buyer-rating {
+        position: static;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        flex: 0 0 130px;
+    }
+
+    .review-write {
+        flex: 1 1 auto;
+
+        width: auto;
+        min-width: 0;
+
+        margin: 0;
+        padding: 0;
+    }
+
+    .review-write textarea {
+        display: block;
+
+        width: 100%;
+        max-width: 100%;
+        min-width: 0;
+
+        box-sizing: border-box;
+    }
+
+}
+
+@media (max-width:402px) {
+    .stp-pc {
+        display: none;
+    }
+
+    .stp-pad {
+        display: none;
+    }
+
+    .stp-mo {
+        display: block;
+    }
+}

@@ -18,14 +18,16 @@
   const deviceDescription = project.querySelector('#lumora-device-description');
 
   const devices = {
-    desktop: { width: 1440, height: 900, description: 'PC · 넓은 이미지와 여유 있는 상품 간격으로 공간의 분위기를 먼저 보여줍니다.' },
-    tablet: { width: 820, height: 1080, description: 'PAD · 화면 폭에 맞춰 메뉴와 상품 배열이 바뀌고, 터치로 편하게 탐색할 수 있습니다.' },
-    mobile: { width: 390, height: 844, description: 'MOBILE · 한 손으로 탐색하기 쉽도록 메뉴와 구매 정보를 작은 화면에 맞게 재배치했습니다.' }
+    desktop: { width: 1440, height: 900, description: 'PC · 공간을 넓게, 탐색은 한눈에.' },
+    tablet: { width: 820, height: 1080, description: 'PAD · 터치에 맞춘 여유 있는 화면.' },
+    mobile: { width: 390, height: 844, description: 'MO · 손안에서도 편안한 탐색.' }
   };
   const pages = {
     home: { path: './projects/lumora/index.html', label: '브랜드 홈' },
     collection: { path: './projects/lumora/list.html', label: '상품 목록' },
-    product: { path: './projects/lumora/product.html?pid=1', label: '상품 상세' }
+    product: { path: './projects/lumora/product.html?pid=1', label: '상품 상세' },
+    login: { path: './projects/lumora/login.html', label: '로그인' },
+    signup: { path: './projects/lumora/signup.html', label: '회원가입' }
   };
   let activeDevice = deviceTabs.find((tab) => tab.getAttribute('aria-selected') === 'true')?.dataset.device || 'desktop';
   let activePage = pageButtons.find((button) => button.getAttribute('aria-pressed') === 'true')?.dataset.page || 'home';
@@ -129,7 +131,7 @@
       const projectURL = new URL('./projects/lumora/', document.baseURI);
       if (loadedURL.origin !== projectURL.origin || !loadedURL.pathname.startsWith(projectURL.pathname)) return;
       const filename = loadedURL.pathname.slice(projectURL.pathname.length);
-      const page = filename === 'list.html' ? 'collection' : filename === 'product.html' ? 'product' : filename === 'index.html' || filename === '' ? 'home' : null;
+      const page = filename === 'list.html' ? 'collection' : filename === 'product.html' ? 'product' : filename === 'login.html' ? 'login' : filename === 'signup.html' ? 'signup' : filename === 'index.html' || filename === '' ? 'home' : null;
       if (page) displayPage(page, loadedURL);
     } catch {
       // Direct file previews may isolate iframe origins. Toolbar navigation still works.

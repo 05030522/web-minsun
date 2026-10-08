@@ -25,7 +25,11 @@ function showInfo(title, content) {
   $('#dialog-content').replaceChildren();
   if (typeof content === 'string') $('#dialog-content').textContent = content;
   else $('#dialog-content').append(content);
-  infoDialog.showModal();
+  openDialog(infoDialog);
+}
+function openDialog(dialog) {
+  dialog.showModal();
+  document.body.classList.add('dialog-open');
 }
 function imageElement(name, alt) {
   const img = document.createElement('img');
@@ -56,10 +60,14 @@ function renderProduct() {
     });
   });
   $('.main-image').addEventListener('click', () => openGallery(galleryImages, mainIndex));
-  if (!reviewInfo.length) {
+  const existingReviews = [...document.querySelectorAll('#reviews .review')];
+  if (existingReviews.length) {
+    existingReviews.forEach(article => bindReview(article, [...article.querySelectorAll('.review-images img')].map(img => img.getAttribute('src').replace(/^\.\/img\//, ''))));
+  } else if (!reviewInfo.length) {
     const p = document.createElement('p'); p.className = 'empty-state'; p.textContent = '등록된 리뷰가 없습니다.'; $('#reviews').append(p);
+  } else {
+    reviewInfo.forEach(renderReview);
   }
-  reviewInfo.forEach(renderReview);
 }
 function renderReview(review) {
   const article = document.createElement('article');
@@ -69,45 +77,72 @@ function renderReview(review) {
   const time = article.querySelector('time'); time.textContent = review.date; time.dateTime = review.date.replaceAll('.', '-');
   for (let i=0; i<review.rating; i++) article.querySelector('.stars').append(imageElement('product/star.svg',''));
   const text = article.querySelector('.review-text'); text.textContent = review.text; text.id = 'review-text-'+review.id;
-  const more = article.querySelector('.review-more'); more.setAttribute('aria-controls', text.id);
-  more.addEventListener('click', () => {
-    const expanded = text.classList.toggle('expanded'); more.setAttribute('aria-expanded', String(expanded)); more.querySelector('span').textContent = expanded ? '접기' : '더보기';
-  });
   review.images.forEach((name,i) => {
     const button = document.createElement('button'); button.setAttribute('aria-label', '리뷰 사진 '+(i+1)+' 확대');
     const img = imageElement(name,'리뷰 사진 '+(i+1)); img.loading = 'lazy'; button.append(img);
-    button.addEventListener('click', () => openGallery(review.images,i)); article.querySelector('.review-images').append(button);
+    article.querySelector('.review-images').append(button);
+  });
+  bindReview(article, review.images);
+  $('#reviews').append(article);
+}
+function bindReview(article, images) {
+  const text = article.querySelector('.review-text');
+  const more = article.querySelector('.review-more');
+  more.setAttribute('aria-controls', text.id);
+  more.addEventListener('click', () => {
+    const expanded = text.classList.toggle('expanded');
+    more.setAttribute('aria-expanded', String(expanded));
+    more.querySelector('span').textContent = expanded ? '접기' : '더보기';
+  });
+  // 본문이 모두 보이는 넓은 화면에서는 불필요한 더보기를 숨깁니다.
+  const updateMore = () => { more.hidden = !text.classList.contains('expanded') && text.scrollHeight <= text.clientHeight + 1; };
+  new ResizeObserver(updateMore).observe(text);
+  article.querySelectorAll('.review-images button').forEach((button, i) => {
+    button.addEventListener('click', () => openGallery(images, i));
   });
   article.querySelector('.helpful').addEventListener('click', event => {
     const button = event.currentTarget; const pressed = button.getAttribute('aria-pressed') !== 'true';
-    button.setAttribute('aria-pressed', String(pressed)); button.querySelector('span').textContent = pressed ? '유용해요 1' : '유용해요';
+    button.setAttribute('aria-pressed', String(pressed)); button.querySelector('span').textContent = pressed ? '✓ 유용해요' : '유용해요';
   });
-  article.querySelector('.report').addEventListener('click', () => showInfo('신고 차단', '현재는 포트폴리오 화면으로, 신고 접수 서비스가 연결되어 있지 않습니다.'));
-  $('#reviews').append(article);
+  article.querySelector('.report').addEventListener('click', () => showInfo('신고 / 차단', '신고/차단이 접수되었습니다.\n포트폴리오 데모로 실제 신고는 전송되지 않습니다.'));
 }
-function openGallery(images, index) { activeImages = images; activeImage = index; updateGallery(); $('#gallery-dialog').showModal(); }
+function openGallery(images, index) {
+  if (!images.length) return;
+  activeImages = images; activeImage = index; updateGallery();
+  $('#gallery-prev').hidden = $('#gallery-next').hidden = images.length < 2;
+  openDialog($('#gallery-dialog'));
+}
 function updateGallery() { $('#gallery-image').src = asset(activeImages[activeImage]); $('#gallery-image').alt = '확대 이미지 '+(activeImage+1); $('#gallery-count').textContent = (activeImage+1)+' / '+activeImages.length; }
 function stepGallery(direction) { activeImage = (activeImage+direction+activeImages.length)%activeImages.length; updateGallery(); }
 $('#gallery-prev').addEventListener('click', () => stepGallery(-1));
 $('#gallery-next').addEventListener('click', () => stepGallery(1));
-$('#gallery-dialog').addEventListener('keydown', event => { if (event.key === 'ArrowLeft') stepGallery(-1); if (event.key === 'ArrowRight') stepGallery(1); });
+$('#gallery-dialog').addEventListener('keydown', event => { if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') { event.preventDefault(); stepGallery(event.key === 'ArrowLeft' ? -1 : 1); } });
 for (const dialog of document.querySelectorAll('dialog')) {
+  dialog.addEventListener('close', () => { if (!document.querySelector('dialog[open]')) document.body.classList.remove('dialog-open'); });
   dialog.querySelector('.close-dialog').addEventListener('click', () => dialog.close());
   dialog.addEventListener('click', event => { if (event.target !== dialog) return; const rect = dialog.getBoundingClientRect(); if (event.clientX<rect.left || event.clientX>rect.right || event.clientY<rect.top || event.clientY>rect.bottom) dialog.close(); });
 }
 const menuToggle = $('.menu-toggle');
+if (menuToggle && $('#mobile-menu')) {
 function closeMenu() { $('#mobile-menu').hidden = true; menuToggle.setAttribute('aria-expanded','false'); menuToggle.setAttribute('aria-label','전체 메뉴 열기'); }
 menuToggle.addEventListener('click', () => { const open = $('#mobile-menu').hidden; $('#mobile-menu').hidden = !open; menuToggle.setAttribute('aria-expanded',String(open)); menuToggle.setAttribute('aria-label',open?'전체 메뉴 닫기':'전체 메뉴 열기'); });
 document.addEventListener('keydown', event => { if(event.key==='Escape' && !$('#mobile-menu').hidden) { closeMenu(); menuToggle.focus(); } });
 document.addEventListener('click', event => { if(!event.target.closest('#mobile-menu,.menu-toggle')) closeMenu(); });
 matchMedia('(min-width:1201px)').addEventListener('change', event => { if(event.matches) closeMenu(); });
+}
 
-function readCart() { try { const data = JSON.parse(localStorage.getItem('lumora-cart') || '[]'); return Array.isArray(data) ? data.filter(item => newProductArray.some(p => p.pid === item.pid) && Number.isInteger(item.quantity) && item.quantity > 0) : []; } catch { return []; } }
+function readCart() { try { const data = JSON.parse(localStorage.getItem('lumora-cart') || '[]'); return Array.isArray(data) ? data.filter(item => item && newProductArray.some(p => p.pid === item.pid) && Number.isInteger(item.quantity) && item.quantity > 0) : []; } catch { return []; } }
 function addCart() {
   if (!productInfo) return showInfo('장바구니','상품을 먼저 선택해 주세요.');
   const cart = readCart(); const item = cart.find(item => item.pid === productInfo.pid);
   if (item) item.quantity++; else cart.push({pid:productInfo.pid,quantity:1});
-  try { localStorage.setItem('lumora-cart',JSON.stringify(cart)); showInfo('장바구니','상품을 장바구니에 담았습니다. 이 브라우저에 저장됩니다.'); }
+  try {
+    localStorage.setItem('lumora-cart',JSON.stringify(cart));
+    const content = document.createElement('div');
+    const message = document.createElement('p'); message.textContent = '상품이 장바구니에 담겼습니다.';
+    const button = document.createElement('button'); button.textContent = '장바구니 보기'; button.addEventListener('click', viewCart);
+    content.append(message, button); showInfo('장바구니', content);
+  }
   catch { showInfo('장바구니','브라우저의 저장소를 사용할 수 없어 상품을 저장하지 못했습니다.'); }
 }
 function viewCart() {
@@ -123,10 +158,20 @@ function showShipping() {
   const rows = [['배송정보','무료배송 (제주도 제외) / 전문 설치배송'],['배송기간','주문 후 배송 일정은 별도 안내됩니다. 설치 일정과 배송 가능 지역은 고객센터로 문의해 주세요.'],['반품 / 교환','반품·교환 가능 여부와 비용은 상품 및 설치 상태에 따라 확인이 필요합니다. 고객센터 1588-2048로 문의해 주세요.']];
   rows.forEach(([title,description]) => { const row = table.insertRow(); const th = document.createElement('th'); th.scope='row'; th.textContent=title; row.append(th); row.insertCell().textContent=description; }); showInfo('배송 / 반품 / 교환 안내',table);
 }
+function startPurchase() {
+  if (!productInfo) return showInfo('구매하기', '상품을 먼저 선택해 주세요.');
+  const content = document.createElement('div'); content.className = 'purchase-confirmation';
+  const summary = document.createElement('p');
+  summary.textContent = productInfo.pname + '\n수량 1개\n총 합계금액 ' + $('#total-price').textContent + '원';
+  const note = document.createElement('p'); note.className = 'dialog-note';
+  note.textContent = '포트폴리오용 주문 체험입니다. 실제 주문이나 결제는 발생하지 않습니다.';
+  const button = document.createElement('button'); button.textContent = '데모 주문 완료하기';
+  button.addEventListener('click', () => showInfo('주문 완료', '데모 주문이 완료되었습니다.\n실제 결제 및 배송은 진행되지 않습니다.'));
+  content.append(summary, note, button); showInfo('주문 확인', content);
+}
 const notices = {
-  login:['로그인','로그인 서비스가 연결되어 있지 않습니다.'],signup:['회원가입','회원가입 서비스가 연결되어 있지 않습니다.'],mypage:['마이페이지','회원 서비스가 연결되어 있지 않습니다.'],
-  coupon:['전체 쿠폰 받기','쿠폰은 로그인 후 발급할 수 있습니다. 현재 로그인·쿠폰 발급 서비스가 연결되어 있지 않습니다.'],
-  benefits:['추가혜택','무이자할부 최대 6개월\n카드 혜택은 결제 시 카드사와 적용 조건을 확인해 주세요.'],points:['LUMORA Point','LUMORA 회원 가입 시 적립 가능합니다. 실제 적립액은 주문 시 확인해 주세요.'],
+  mypage:['마이페이지','회원 서비스가 연결되어 있지 않습니다.'],
+  coupon:['전체 쿠폰 받기','쿠폰이 다운로드 되었습니다.'],
   qa:['상품Q&A','등록된 상품 문의가 없습니다.\n상품 문의: 1588-2048\n평일 09:30 - 18:00 (점심시간 12:30 - 13:30)'],
   terms:['이용약관','포트폴리오 페이지입니다. 실제 쇼핑몰 이용약관은 제공되지 않았습니다.'],privacy:['개인정보처리방침','이 페이지는 입력한 정보를 서버로 전송하지 않습니다. 장바구니 정보만 현재 브라우저에 저장됩니다.'],
   'email-policy':['이메일무단수집거부','이메일 주소의 무단 수집을 거부합니다.'],company:['사업자정보확인','포트폴리오용 예시 사업자 정보입니다. 실제 사업자 조회 서비스가 연결되어 있지 않습니다.'],youtube:['유튜브','공식 채널 주소가 아직 등록되지 않았습니다.'],instagram:['인스타그램','공식 계정 주소가 아직 등록되지 않았습니다.']
@@ -134,10 +179,11 @@ const notices = {
 document.addEventListener('click', event => {
   const trigger = event.target.closest('[data-action]'); if(!trigger) return;
   const action = trigger.dataset.action;
+  if (action === 'login' || action === 'signup') { location.href = './' + action + '.html'; return; }
+  if (['benefits', 'points', 'shipping'].includes(action)) return openDialog($('#' + action + '-dialog'));
   if(action==='add-cart') return addCart();
   if(action==='cart') return viewCart();
-  if(action==='shipping') return showShipping();
-  if(action==='buy') return showInfo('구매하기', !productInfo ? '상품을 먼저 선택해 주세요.' : productInfo.pname+'\n판매가 '+won(productInfo.price*(1-productInfo.pdiscount))+'원\n\n'+(productInfo.designTotal ? '시안의 총 합계금액과 판매가가 달라 주문 금액 확인이 필요합니다.\n' : '')+'현재 결제 서비스가 연결되어 있지 않아 주문이나 결제는 진행되지 않습니다.');
+  if(action==='buy') return startPurchase();
   if(action==='search') {
     const form = document.createElement('form'); const input = document.createElement('input'); input.type='search'; input.placeholder='상품명 검색'; input.setAttribute('aria-label','상품명 검색');
     const results = document.createElement('div');
@@ -155,3 +201,7 @@ function updateTabs() {
 let scrollPending = false;
 addEventListener('scroll', () => { if(scrollPending) return; scrollPending=true; requestAnimationFrame(()=>{updateTabs();scrollPending=false;}); }, {passive:true});
 renderProduct(); updateTabs();
+document.querySelectorAll('a:has(img[src="./img/cart.svg"])').forEach(link => {
+  link.addEventListener('click', event => { event.preventDefault(); viewCart(); });
+});
+if (getParameter('view') === 'cart') viewCart();

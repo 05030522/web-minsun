@@ -6,5 +6,5 @@ document.addEventListener('DOMContentLoaded', () => {
   openButton.setAttribute('role','button');openButton.setAttribute('aria-controls','smart-navigation');openButton.setAttribute('aria-expanded','false');overlay.id='smart-navigation';overlay.setAttribute('aria-hidden','true');
   openButton.addEventListener('click',event=>{event.preventDefault();setOpen(true);});closeButton.addEventListener('click',event=>{event.preventDefault();setOpen(false);});
   navLinks.forEach((link,index)=>link.addEventListener('click',event=>{if(index===0){setOpen(false);return;}event.preventDefault();panels.forEach((panel,panelIndex)=>panel.classList.toggle('is-active',panelIndex===index-1));}));
-  if(panels[0])panels[0].classList.add('is-active');document.addEventListener('keydown',event=>{if(event.key==='Escape'&&overlay.classList.contains('is-open'))setOpen(false);});
+  if(panels[0])panels[0].classList.add('is-active');document.addEventListener('keydown',event=>{if(event.key==='Escape'&&!document.querySelector('dialog[open]')&&overlay.classList.contains('is-open'))setOpen(false);});
 });

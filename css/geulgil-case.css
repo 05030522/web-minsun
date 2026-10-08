@@ -1,0 +1,185 @@
+/* GEULGIL presentation only. Brand colors sampled from the live project's CSS. */
+.geulgil-project {
+  --geulgil-ink: #212252;
+  --geulgil-purple: #3a3b81;
+  --geulgil-lavender: #c5c6e2;
+  --geulgil-paper: #faf8f4;
+  --geulgil-gutter: clamp(24px, 5vw, 88px);
+  background: var(--geulgil-paper);
+  color: var(--geulgil-ink);
+  font-family: 'Pretendard', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  isolation: isolate;
+}
+
+.geulgil-project .geulgil-container {
+  width: calc(100% - var(--geulgil-gutter) * 2);
+  max-width: 1280px;
+  margin-inline: auto;
+}
+
+.geulgil-project img { display: block; max-width: 100%; height: auto; }
+.geulgil-project figure { min-width: 0; margin: 0; }
+.geulgil-project :is(h2, h3, p) { word-break: keep-all; }
+.geulgil-project a:focus-visible { outline: 3px solid var(--geulgil-purple); outline-offset: 7px; }
+.geulgil-project .geulgil-eyebrow { font-size: 12px; font-weight: 500; letter-spacing: .14em; line-height: 1.5; }
+
+/* The main screen bridges the dark cover and the light editorial spread. */
+.geulgil-project .geulgil-cover {
+  padding-top: clamp(64px, 7vw, 104px);
+  background: var(--geulgil-ink);
+  color: var(--geulgil-paper);
+}
+
+.geulgil-project .geulgil-cover__meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid #c5c6e24d;
+  color: var(--geulgil-lavender);
+}
+
+.geulgil-project .geulgil-brand { display: block; flex-shrink: 0; }
+.geulgil-project .geulgil-brand img { width: 76px; max-height: 82px; object-fit: contain; }
+.geulgil-project .geulgil-brand:empty { display: none; }
+
+.geulgil-project .geulgil-cover h2 {
+  margin: 42px 0 26px -.035em;
+  font: 500 clamp(84px, 15.4vw, 222px)/.9 Arial, sans-serif;
+  letter-spacing: -.075em;
+}
+
+.geulgil-project .geulgil-cover__copy {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  gap: 32px;
+  padding-block: 10px 54px;
+}
+
+.geulgil-project .geulgil-cover__lead { font-size: clamp(26px, 2.7vw, 39px); font-weight: 400; line-height: 1.5; letter-spacing: -.04em; }
+.geulgil-project .geulgil-cover__summary { max-width: 340px; color: var(--geulgil-lavender); font-size: 15px; line-height: 1.9; }
+
+.geulgil-project .geulgil-main {
+  padding-bottom: clamp(56px, 6vw, 88px);
+  background: linear-gradient(to bottom, var(--geulgil-ink) 0%, var(--geulgil-ink) 60%, var(--geulgil-paper) 60%, var(--geulgil-paper) 100%);
+}
+
+.geulgil-project .geulgil-screen {
+  overflow: hidden;
+  border: 1px solid #2122521a;
+  border-radius: 7px 7px 0 0;
+  background: #fff;
+  box-shadow: 0 20px 60px #2122520d;
+}
+
+.geulgil-project .geulgil-screen__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  min-height: 32px;
+  padding: 8px 15px;
+  border-bottom: 1px solid #2122520d;
+  background: #f3f1f6;
+  color: #67667c;
+  font: 10px/1.4 Arial, sans-serif;
+  letter-spacing: .07em;
+}
+
+.geulgil-project .geulgil-screen__dots { display: flex; gap: 5px; }
+.geulgil-project .geulgil-screen__dots i { display: block; width: 5px; height: 5px; border-radius: 50%; background: #b7b5c8; }
+.geulgil-project .geulgil-screen__image { overflow: hidden; }
+.geulgil-project .geulgil-screen__image img { width: 100%; transition: transform .8s cubic-bezier(.22, .7, .2, 1); }
+.geulgil-project .geulgil-main__screen { width: 91.5%; margin-inline: auto; box-shadow: 0 28px 70px #10112d26; }
+.geulgil-project .geulgil-main__caption { display: flex; justify-content: space-between; gap: 16px; margin-top: 22px; color: #6c687b; font-size: 12px; }
+.geulgil-project .geulgil-main__caption span:first-child { letter-spacing: .11em; }
+
+/* Unequal columns, offset screens and short captions replace a repeated card grid. */
+.geulgil-project .geulgil-showcase { padding-block: 28px clamp(76px, 8vw, 120px); }
+.geulgil-project .geulgil-showcase__heading { display: flex; justify-content: space-between; align-items: start; gap: 32px; margin-bottom: 54px; }
+.geulgil-project .geulgil-showcase__heading .geulgil-eyebrow { padding-top: 9px; color: var(--geulgil-purple); }
+.geulgil-project .geulgil-showcase__heading h3 { width: 58%; font-size: clamp(30px, 3.4vw, 48px); line-height: 1.4; font-weight: 500; letter-spacing: -.045em; }
+.geulgil-project .geulgil-showcase__grid { display: grid; grid-template-columns: 1.32fr 1fr; align-items: start; gap: clamp(30px, 5vw, 74px); }
+.geulgil-project .geulgil-feature--detail { padding-top: 124px; }
+.geulgil-project .geulgil-feature__visual { padding: clamp(16px, 2.2vw, 32px); background: #eeedf5; }
+.geulgil-project .geulgil-feature--detail .geulgil-feature__visual { background: #e9e5df; }
+.geulgil-project .geulgil-feature__caption { display: flex; align-items: start; gap: 16px; margin-top: 24px; }
+.geulgil-project .geulgil-feature__number { padding-top: 2px; color: #797590; font-size: 12px; }
+.geulgil-project .geulgil-feature__caption h4 { font-size: clamp(16px, 1.5vw, 21px); line-height: 1.4; font-weight: 500; letter-spacing: .025em; }
+.geulgil-project .geulgil-feature__caption p { margin-top: 7px; color: #6c687b; font-size: 14px; }
+.geulgil-project .geulgil-feature__note { margin-top: 36px; padding-top: 23px; border-top: 1px solid #21225226; }
+.geulgil-project .geulgil-feature__note p { margin-top: 8px; color: #6c687b; font-size: 14px; }
+
+/* A quiet closing line keeps the transition to the existing portfolio intact. */
+.geulgil-project .geulgil-outro { padding-bottom: clamp(64px, 7vw, 104px); }
+.geulgil-project .geulgil-outro__inner { display: flex; align-items: center; justify-content: space-between; gap: 32px; padding-top: 36px; border-top: 1px solid #21225233; }
+.geulgil-project .geulgil-outro__brand { display: flex; align-items: center; gap: 24px; }
+.geulgil-project .geulgil-outro__brand .geulgil-brand img { width: 56px; max-height: 62px; }
+.geulgil-project .geulgil-outro__line { font-size: clamp(21px, 2.2vw, 30px); line-height: 1.4; letter-spacing: -.025em; }
+.geulgil-project .geulgil-outro__sub { margin-top: 5px; color: #6c687b; font-size: 13px; }
+.geulgil-project .geulgil-link { display: inline-flex; flex-shrink: 0; align-items: center; justify-content: space-between; gap: 48px; min-height: 60px; padding: 17px 24px; border: 1px solid var(--geulgil-purple); background: var(--geulgil-purple); color: #fff; font-size: 13px; letter-spacing: .07em; transition: background .25s ease, border-color .25s ease; }
+.geulgil-project .geulgil-link__arrow { display: inline-block; font-size: 24px; line-height: 1; transition: transform .3s ease; }
+
+.geulgil-project.geulgil-motion-ready [data-geulgil-reveal] { opacity: 0; transform: translateY(24px); transition: opacity .8s cubic-bezier(.22, .7, .2, 1), transform .8s cubic-bezier(.22, .7, .2, 1); }
+.geulgil-project.geulgil-motion-ready [data-geulgil-reveal="image"] { transform: translateY(32px); clip-path: inset(0 0 7% 0); transition: opacity .9s ease, transform .95s cubic-bezier(.22, .7, .2, 1), clip-path .95s cubic-bezier(.22, .7, .2, 1); }
+.geulgil-project.geulgil-motion-ready [data-geulgil-reveal].geulgil-is-visible { opacity: 1; transform: none; clip-path: inset(0); }
+
+@media (hover: hover) and (pointer: fine) {
+  .geulgil-project .geulgil-screen:hover .geulgil-screen__image img { transform: scale(1.015); }
+  .geulgil-project .geulgil-link:hover { background: var(--geulgil-ink); border-color: var(--geulgil-ink); }
+  .geulgil-project .geulgil-link:hover .geulgil-link__arrow { transform: translate(3px, -3px); }
+}
+
+@media (max-width: 900px) {
+  .geulgil-project .geulgil-cover__copy { align-items: start; }
+  .geulgil-project .geulgil-cover__summary { max-width: 260px; font-size: 14px; }
+  .geulgil-project .geulgil-main__screen { width: 100%; }
+  .geulgil-project .geulgil-showcase__grid { grid-template-columns: 1.15fr 1fr; gap: 28px; }
+  .geulgil-project .geulgil-feature--detail { padding-top: 90px; }
+  .geulgil-project .geulgil-feature__visual { padding: 16px; }
+  .geulgil-project .geulgil-link { gap: 26px; }
+}
+
+@media (max-width: 600px) {
+  .geulgil-project { --geulgil-gutter: 22px; }
+  .geulgil-project .geulgil-cover { padding-top: 46px; }
+  .geulgil-project .geulgil-cover__meta { padding-bottom: 20px; gap: 16px; }
+  .geulgil-project .geulgil-eyebrow { font-size: 10px; letter-spacing: .1em; }
+  .geulgil-project .geulgil-brand img { width: 48px; max-height: 52px; }
+  .geulgil-project .geulgil-cover h2 { margin-block: 32px 24px; font-size: clamp(60px, 16.2vw, 96px); letter-spacing: -.075em; }
+  .geulgil-project .geulgil-cover__copy { flex-direction: column; gap: 18px; padding-block: 0 34px; }
+  .geulgil-project .geulgil-cover__lead { font-size: clamp(24px, 6.7vw, 32px); }
+  .geulgil-project .geulgil-cover__summary { max-width: 300px; font-size: 13px; }
+  .geulgil-project .geulgil-main { padding-bottom: 48px; background: linear-gradient(to bottom, var(--geulgil-ink) 60%, var(--geulgil-paper) 60%); }
+  .geulgil-project .geulgil-screen__bar { min-height: 25px; padding: 6px 10px; font-size: 8px; }
+  .geulgil-project .geulgil-screen__dots { gap: 4px; }
+  .geulgil-project .geulgil-screen__dots i { width: 4px; height: 4px; }
+  .geulgil-project .geulgil-main__caption { margin-top: 16px; font-size: 10px; }
+  .geulgil-project .geulgil-showcase { padding-top: 20px; padding-bottom: 56px; }
+  .geulgil-project .geulgil-showcase__heading { flex-direction: column; gap: 18px; margin-bottom: 32px; }
+  .geulgil-project .geulgil-showcase__heading h3 { width: 100%; font-size: 30px; }
+  .geulgil-project .geulgil-showcase__grid { grid-template-columns: minmax(0, 1fr); gap: 38px; }
+  .geulgil-project .geulgil-feature--detail { padding-top: 0; }
+  .geulgil-project .geulgil-feature__caption { margin-top: 18px; gap: 12px; }
+  .geulgil-project .geulgil-feature__caption h4 { font-size: 17px; }
+  .geulgil-project .geulgil-feature__caption p { font-size: 13px; }
+  .geulgil-project .geulgil-feature__note { margin-top: 25px; padding-top: 20px; }
+  .geulgil-project .geulgil-feature__note .geulgil-eyebrow { font-size: 11px; }
+  .geulgil-project .geulgil-feature__note p { font-size: 13px; }
+  .geulgil-project .geulgil-outro { padding-bottom: 56px; }
+  .geulgil-project .geulgil-outro__inner { flex-direction: column; align-items: stretch; gap: 25px; padding-top: 28px; }
+  .geulgil-project .geulgil-outro__brand { gap: 18px; }
+  .geulgil-project .geulgil-outro__brand .geulgil-brand img { width: 46px; }
+  .geulgil-project .geulgil-link { min-height: 58px; font-size: 12px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .geulgil-project.geulgil-motion-ready [data-geulgil-reveal] { opacity: 1; transform: none; clip-path: none; transition: none; }
+  .geulgil-project .geulgil-screen__image img,
+  .geulgil-project .geulgil-link,
+  .geulgil-project .geulgil-link__arrow { transition: none; transform: none; }
+}
