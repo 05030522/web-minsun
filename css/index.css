@@ -3197,20 +3197,20 @@ body.is-detail-modal-open {
 
 .web-designs__intro h2 {
   margin: 0;
-  font-size: clamp(48px, 6vw, 64px);
+  font-size: clamp(48px, 6vw, 82px);
   font-weight: 700;
   line-height: 1.08;
   letter-spacing: -0.02em;
 }
 
 .web-designs__description {
-  max-width: 850px;
-  margin: 24px auto 0;
-  color: #414141;
-  font-size: 13px;
-  font-weight: 400;
-  line-height: 1.4;
-  word-break: keep-all;
+    max-width: 850px;
+    margin: 24px auto 0;
+    color: #414141;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 1.4;
+    word-break: keep-all;
 }
 
 .web-designs__label {
@@ -3240,7 +3240,7 @@ body.is-detail-modal-open {
 }
 
 .web-designs__project-type {
-  margin: 0;
+  margin: 42px ;
   font-size: clamp(24px, 2.8vw, 30px);
   font-weight: 700;
   line-height: 1.05;
@@ -3255,12 +3255,12 @@ body.is-detail-modal-open {
 }
 
 .web-designs__project-description {
-  max-width: 850px;
-  margin: 44px auto 0;
-  font-size: 11px;
-  line-height: 1.6;
-  font-weight: 400;
-  word-break: keep-all;
+    max-width: 850px;
+    margin: 44px auto 0;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 400;
+    word-break: keep-all;
 }
 
 .web-designs__project-description > span {
