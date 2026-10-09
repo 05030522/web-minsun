@@ -15,6 +15,7 @@
     if ('scrollRestoration' in history) {
       history.scrollRestoration = 'manual';
     }
+    <!-- Git 커밋 테스트 -->
     window.addEventListener('pageshow', () => {
       if (!window.location.hash) {
         window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
