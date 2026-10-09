@@ -1,0 +1,70 @@
+﻿diff --git a/index.html b/index.html
+index 30c35df..9acb2f9 100644
+--- a/index.html
++++ b/index.html
+@@ -15,7 +15,6 @@
+     if ('scrollRestoration' in history) {
+       history.scrollRestoration = 'manual';
+     }
+-    <!-- Git 커밋 테스트 -->
+     window.addEventListener('pageshow', () => {
+       if (!window.location.hash) {
+         window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+@@ -625,31 +624,29 @@
+         <article class="detail-card">
+           <button class="detail-card__trigger" type="button" aria-expanded="false" aria-controls="detailModal"
+             data-detail-target="detail-project-01">
+-            <span class="detail-card__image"><img src="./img/serum-ss.png" alt="serum Detail"></span>
+-            <span class="sr-only">Moisture Serum 상세페이지</span>
++            <span class="detail-card__image"><img src="./img/AQUA LUMIÈRE-ss.png" alt="serum Detail"></span>
++            <span class="sr-only">AQUA LUMIÈRE 상세페이지</span>
+           </button>
+           <div class="detail-card__copy">
+-            <h3>Moisture Serum 상세페이지</h3>
+-            <p>히알루론산 3중 복합체의 빠른 보습감을 중심으로,
+-              맑고 촉촉한 세럼의 이미지를 시각적으로 표현했습니다.</p>
++            <h3>AQUA LUMIÈRE 상세페이지</h3>
++            <p>수분 세럼의 촉촉한 이미지를 중심으로, 맑은 블루 톤과 투명한 오브제, 빛의 반사를 활용해 깨끗하고 청량한 브랜드 분위기를 표현했습니다.</p>
+           </div>
+         </article>
+         <article class="detail-card">
+           <button class="detail-card__trigger" type="button" aria-expanded="false" aria-controls="detailModal"
+             data-detail-target="detail-project-02">
+-            <span class="detail-card__image"><img src="./img/lalasweet-ss.png" alt="LALASWEET 상세페이지"></span>
+-            <span class="sr-only">LALASWEET 상세페이지</span>
++            <span class="detail-card__image"><img src="./img/MELT_HOUR-ss.png" alt="MELT_HOUR 상세페이지"></span>
++            <span class="sr-only"> MELT_HOUR 상세페이지</span>
+           </button>
+           <div class="detail-card__copy">
+-            <h3>LALASWEET 상세페이지</h3>
+-            <p>미니컵의 간편함과 망고·말차의 풍부한 맛을 중심으로
+-              부드럽고 따뜻한 브랜드 이미지를 표현했습니다.</p>
++            <h3>MELT_HOUR 상세페이지</h3>
++            <p>저당 아이스크림의 가벼운 달콤함과 세 가지 식감의 매력을 중심으로, 크림색과 세이지 그린을 활용해 부드럽고 편안한 브랜드 이미지를 표현했습니다.</p>
+           </div>
+         </article>
+         <article class="detail-card">
+           <button class="detail-card__trigger" type="button" aria-expanded="false" aria-controls="detailModal"
+             data-detail-target="detail-project-03">
+-            <span class="detail-card__image"><img src="./img/apple-watch-ss.png" alt="APPLE WATCH 상세페이지"></span>
++            <span class="detail-card__image"><img src="./img/APPLE WATCH-ss.png" alt="APPLE WATCH 상세페이지"></span>
+             <span class="sr-only">APPLE WATCH 상세페이지</span>
+           </button>
+           <div class="detail-card__copy">
+@@ -667,13 +664,13 @@
+         <button class="detail-modal__close" type="button" aria-label="상세페이지 닫기" data-detail-close>×</button>
+         <div class="detail-modal__scroll" tabindex="-1">
+           <article class="detail-page" id="detail-project-01" hidden>
+-            <img class="detail-page__full-image" src="./img/serum-detail.jpeg" alt="Serum Detail Page">
++            <img class="detail-page__full-image" src="./img/AQUA LUMIÈRE-detail.png" alt="AQUA LUMIÈRE Detail Page">
+           </article>
+           <article class="detail-page" id="detail-project-02" hidden>
+-            <img class="detail-page__full-image" src="./img/lalasweet-detail.jpg" alt="Lalasweet Detail Page">
++            <img class="detail-page__full-image" src="./img/MELT_HOUR-detail.png" alt="MELT_HOUR Detail Page">
+           </article>
+           <article class="detail-page" id="detail-project-03" hidden>
+-            <img class="detail-page__full-image" src="./img/apple-watch-detail.jpeg" alt="Apple Watch Detail Page">
++            <img class="detail-page__full-image" src="./img/APPLE WATCH-detail.png" alt="APPLE WATCH Detail Page">
+           </article>
+         </div>
+       </div>

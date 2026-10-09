@@ -1,0 +1,384 @@
+/* Motion enhancements; reserve bottom space for the larger decorative rabbits. */
+.motion-title__text {
+  display: block;
+}
+
+.motion-title.is-motion-pending,
+.motion-title.is-motion-running {
+  overflow: hidden;
+}
+
+.motion-title.is-motion-pending>.motion-title__text {
+  transform: translateY(105%);
+  opacity: 0;
+}
+
+.motion-title.is-motion-running>.motion-title__text {
+  animation: title-unmask .85s cubic-bezier(.22, .7, .2, 1) both;
+}
+
+@keyframes title-unmask {
+  from {
+    transform: translateY(105%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.motion-image {
+  --image-mask: inset(0 100% 0 0);
+}
+
+.motion-image--right {
+  --image-mask: inset(0 0 0 100%);
+}
+
+.motion-image--down {
+  --image-mask: inset(0 0 100% 0);
+}
+
+.motion-image.is-motion-pending {
+  clip-path: var(--image-mask);
+}
+
+.motion-image.is-motion-running {
+  animation: image-unmask .95s cubic-bezier(.22, .7, .2, 1) both;
+}
+
+@keyframes image-unmask {
+  from {
+    clip-path: var(--image-mask);
+  }
+
+  to {
+    clip-path: inset(0);
+  }
+}
+
+/* Replace only the existing figure reveal, avoiding two transforms on the same image. */
+.lumora-project.is-enhanced [data-lumora-reveal].motion-image {
+  opacity: 1;
+  transform: none;
+  transition: none;
+}
+
+.motion-copy.is-motion-pending {
+  opacity: 0;
+  translate: 0 12px;
+}
+
+.motion-copy.is-motion-running {
+  animation: copy-arrive .7s cubic-bezier(.22, .7, .2, 1) both;
+  animation-delay: var(--motion-delay, 100ms);
+}
+
+@keyframes copy-arrive {
+  from {
+    opacity: 0;
+    translate: 0 12px;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+.motion-profile.is-motion-pending {
+  opacity: 0;
+  translate: -40px 0;
+}
+
+.motion-profile.is-motion-running {
+  animation: profile-arrive .8s cubic-bezier(.22, .7, .2, 1) both;
+  animation-delay: var(--motion-delay, 0ms);
+}
+
+@keyframes profile-arrive {
+  from {
+    opacity: 0;
+    translate: -40px 0;
+  }
+
+  to {
+    opacity: 1;
+    translate: 0 0;
+  }
+}
+
+/* Independent transform properties preserve the yarns' existing translateY(-50%). */
+.motion-yarn {
+  translate: var(--yarn-x, 0px) var(--yarn-y, 0px);
+  rotate: var(--yarn-angle, 0deg);
+  scale: var(--yarn-scale, 1);
+}
+
+.experience {
+  position: relative;
+}
+
+.web-designs__intro {
+  padding-bottom: calc(clamp(100px, 10vw, 180px) + 20px);
+}
+
+.motion-rabbit {
+  position: absolute;
+  bottom: 0;
+  width: clamp(100px, 20vw, 380px);
+  height: clamp(100px, 20vw, 380px);
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  visibility: hidden;
+}
+
+.motion-ready .motion-rabbit {
+  visibility: visible;
+}
+
+.motion-rabbit--web {
+  right: clamp(24px, 4vw, 72px);
+}
+
+.motion-rabbit--career {
+  left: clamp(24px, 4vw, 72px);
+}
+
+.motion-rabbit__peek {
+  transform: translateY(calc((1 - var(--peek-progress, 0)) * 100%));
+  transition: transform .9s cubic-bezier(.22, .7, .2, 1);
+}
+
+.motion-rabbit img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.motion-rabbit.is-peeking img {
+  animation: rabbit-breathe 4.8s ease-in-out infinite;
+}
+
+@keyframes rabbit-breathe {
+
+  0%,
+  100% {
+    translate: 0 0;
+    rotate: -.5deg;
+  }
+
+  50% {
+    translate: 0 -3px;
+    rotate: .5deg;
+  }
+}
+
+/* Fits inside the existing 300px top padding; adds no document-flow height. */
+.motion-marquee {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  user-select: none;
+  opacity: .12;
+  font-size: clamp(28px, 4vw, 64px);
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.motion-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: quiet-marquee 65s linear infinite;
+  animation-play-state: paused;
+}
+
+.motion-marquee__track>span {
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+.motion-marquee.is-in-view .motion-marquee__track {
+  animation-play-state: running;
+}
+
+@keyframes quiet-marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+/* Keep hover scaling inside the image window, including keyboard focus. */
+.popup-image:hover img,
+.detail-card__trigger:is(:hover, :focus-visible) .detail-card__image {
+  transform: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+  .popup-image img,
+  .detail-card__image img,
+  .lumora-screen__visual img {
+    transition: scale .35s ease;
+  }
+
+  .popup-image:hover img,
+  .popup-image:focus-visible img,
+  .detail-card__trigger:is(:hover, :focus-visible) .detail-card__image img,
+  .lumora-screen__visual:hover img,
+  .lumora-screen__visual:focus-visible img {
+    scale: 1.025;
+  }
+
+  .contact__links span,
+  .lumora-button>span,
+  .lumora-text-link>span {
+    position: relative;
+    left: 0;
+    transition: left .3s ease;
+  }
+
+  .contact__links a:is(:hover, :focus-visible) span,
+  .lumora-button:is(:hover, :focus-visible)>span,
+  .lumora-text-link:is(:hover, :focus-visible)>span {
+    left: 3px;
+  }
+}
+
+@media (max-width: 900px),
+(pointer: coarse) {
+  #contents-title {
+    transform: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .web-designs__intro {
+    padding-bottom: 104px;
+  }
+
+  .motion-rabbit {
+    width: 84px;
+    height: 84px;
+  }
+
+  .motion-rabbit--web {
+    right: 12px;
+  }
+
+  .motion-rabbit--career {
+    left: 12px;
+  }
+
+  .motion-rabbit__peek {
+    transition-duration: .8s;
+  }
+
+  .motion-rabbit.is-peeking img {
+    animation: none;
+  }
+
+  .motion-marquee__track {
+    animation-duration: 85s;
+  }
+
+  .motion-title.is-motion-running>.motion-title__text {
+    animation-duration: .65s;
+  }
+
+  .motion-image.is-motion-running {
+    animation-duration: .7s;
+  }
+
+  @keyframes copy-arrive {
+    from {
+      opacity: 0;
+      translate: 0 8px;
+    }
+
+    to {
+      opacity: 1;
+      translate: 0 0;
+    }
+  }
+}
+
+/* Include pre-existing decorative motion and smooth scrolling in the opt-out. */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .motion-title.is-motion-pending,
+  .motion-title.is-motion-running {
+    overflow: visible;
+  }
+
+  .motion-title__text,
+  .motion-image,
+  .motion-copy,
+  .motion-profile,
+  .motion-yarn,
+  .motion-rabbit img {
+    animation: none !important;
+    translate: none !important;
+    rotate: none !important;
+    scale: none !important;
+    opacity: 1 !important;
+  }
+
+  .motion-title>.motion-title__text {
+    transform: none !important;
+  }
+
+  .motion-image {
+    clip-path: none !important;
+  }
+
+  .motion-rabbit__peek {
+    transform: none;
+    transition: none;
+  }
+
+  .motion-marquee {
+    display: none;
+  }
+
+  .motion-marquee__track {
+    animation: none;
+  }
+
+  .hero-popup,
+  .hero__rabbit {
+    animation: none !important;
+  }
+
+  #contents-title {
+    transform: none !important;
+  }
+
+  .hero-popup,
+  .popup-image img,
+  .popup-card,
+  .detail-card__image,
+  .detail-card__image img,
+  .lumora-screen__visual img,
+  .contact__links span,
+  .lumora-button>span,
+  .lumora-text-link>span {
+    transition: none !important;
+    scale: none !important;
+    translate: none !important;
+  }
+
+  .hero-popup:hover,
+  .detail-card__trigger:hover .detail-card__image img {
+    transform: none;
+  }
+}
