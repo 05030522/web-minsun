@@ -113,17 +113,53 @@
 .geulgil-project .geulgil-screen__image { overflow: hidden; }
 .geulgil-project .geulgil-screen__image img { width: 100%; transition: transform .8s var(--geulgil-ease); }
 
-/* 03 / Design concept */
-.geulgil-project .geulgil-concept { padding-bottom: clamp(72px, 8vw, 128px); }
-.geulgil-project .geulgil-concept__grid { display: grid; grid-template-columns: minmax(0, .95fr) minmax(0, 1.05fr); gap: clamp(36px, 6vw, 112px); align-items: start; }
-.geulgil-project .geulgil-concept__heading h3 { margin-top: 18px; font-size: clamp(28px, 3.2vw, 48px); font-weight: 500; line-height: 1.4; letter-spacing: -.045em; }
-.geulgil-project .geulgil-concept__keyword { margin-top: clamp(22px, 2.4vw, 34px); color: var(--geulgil-muted); font-size: 15px; line-height: 1.8; }
-.geulgil-project .geulgil-concept__keyword span { display: block; margin-bottom: 4px; color: var(--geulgil-purple); font-size: 12px; font-weight: 600; letter-spacing: .12em; }
-.geulgil-project .geulgil-concept__list { margin: 0; padding: 0; border-top: 1px solid var(--geulgil-line); list-style: none; }
-.geulgil-project .geulgil-concept__list li { display: grid; grid-template-columns: 56px minmax(0, 1fr); gap: 16px; padding-block: clamp(20px, 2.2vw, 30px); border-bottom: 1px solid var(--geulgil-line); }
-.geulgil-project .geulgil-concept__number { padding-top: 3px; color: var(--geulgil-purple); font-size: 13px; font-weight: 600; letter-spacing: .06em; }
-.geulgil-project .geulgil-concept__list h4 { font-size: clamp(17px, 1.5vw, 21px); font-weight: 500; line-height: 1.4; letter-spacing: .02em; }
-.geulgil-project .geulgil-concept__list p { margin-top: 6px; color: var(--geulgil-muted); font-size: 15px; line-height: 1.75; }
+/* 03 / Brand & design concept: keywords, palette and typography, told at length like LUMORA's concept. */
+.geulgil-project .geulgil-concept { --geulgil-type-base: 16px; padding-bottom: clamp(80px, 9vw, 150px); }
+.geulgil-project .geulgil-concept__heading { margin-bottom: clamp(44px, 5.5vw, 80px); }
+.geulgil-project .geulgil-concept__heading h3 { margin-top: 20px; font-size: clamp(34px, 4.4vw, 66px); font-weight: 600; line-height: 1.25; letter-spacing: -.05em; }
+.geulgil-project .geulgil-concept__heading h3 em { color: var(--geulgil-purple); font-style: normal; font-weight: 400; }
+.geulgil-project .geulgil-concept__lead { max-width: 760px; margin-top: 26px; color: var(--geulgil-muted); font-size: clamp(16px, 1.25vw, 18px); line-height: 1.85; }
+
+.geulgil-project .geulgil-concept__grid { display: grid; grid-template-columns: minmax(0, 1.08fr) minmax(0, 1fr); align-items: center; gap: clamp(40px, 7vw, 120px); }
+.geulgil-project .geulgil-concept__image { overflow: hidden; border: 1px solid #2122521a; background: #fff; }
+.geulgil-project .geulgil-concept__image img { width: 100%; transition: transform .8s var(--geulgil-ease); }
+.geulgil-project .geulgil-concept__words > div + div { margin-top: clamp(28px, 3vw, 42px); }
+.geulgil-project .geulgil-concept__words h4 { color: var(--geulgil-purple); font-size: clamp(48px, 5.2vw, 80px); font-weight: 600; line-height: 1; letter-spacing: -.05em; }
+.geulgil-project .geulgil-concept__words > div:nth-child(2) h4 { color: #8889d2; }
+.geulgil-project .geulgil-concept__words > div:nth-child(3) h4 { color: var(--geulgil-ink); }
+.geulgil-project .geulgil-concept__words p { margin-top: 14px; color: var(--geulgil-muted); font-size: clamp(15px, 1.15vw, 17px); line-height: 1.7; }
+
+.geulgil-project .geulgil-palette { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); margin-top: clamp(44px, 5vw, 64px); border: 1px solid #2122521f; }
+.geulgil-project .geulgil-palette > div { display: flex; flex-direction: column; justify-content: end; gap: 2px; min-width: 0; min-height: clamp(96px, 8vw, 128px); padding: clamp(12px, 1.4vw, 20px); font-size: 15px; line-height: 1.4; }
+.geulgil-project .geulgil-palette small { font-size: 12px; letter-spacing: .04em; opacity: .75; }
+.geulgil-project .geulgil-palette__navy { background: #3a3b81; color: #fff; }
+.geulgil-project .geulgil-palette__lavender { background: #c5c6e2; }
+.geulgil-project .geulgil-palette__white { background: #fff; }
+.geulgil-project .geulgil-palette__gray { background: #f7f7f7; }
+.geulgil-project .geulgil-palette__ink { background: #111; color: #fff; }
+
+.geulgil-project .geulgil-type { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: clamp(36px, 6vw, 104px); margin-top: clamp(56px, 7vw, 104px); padding-top: clamp(40px, 4.5vw, 64px); border-top: 1px solid var(--geulgil-line); }
+.geulgil-project .geulgil-type__sample { margin-top: 18px; color: var(--geulgil-purple); font-size: clamp(96px, 10vw, 160px); font-weight: 700; line-height: 1; letter-spacing: -.05em; }
+.geulgil-project .geulgil-type__font h4 { margin-top: 22px; font-size: clamp(22px, 1.9vw, 28px); font-weight: 700; line-height: 1.3; }
+.geulgil-project .geulgil-type__font > p:not(.geulgil-eyebrow):not(.geulgil-type__sample):not(.geulgil-type__weights) { margin-top: 12px; color: var(--geulgil-muted); font-size: clamp(15px, 1.15vw, 17px); line-height: 1.8; }
+.geulgil-project .geulgil-type__weights { display: flex; flex-wrap: wrap; gap: 6px 20px; margin-top: 14px; font-size: 14px; }
+.geulgil-project .geulgil-type__weights span:last-child { font-weight: 700; }
+.geulgil-project .geulgil-type__note { color: var(--geulgil-muted); font-size: 14px; line-height: 1.6; }
+.geulgil-project .geulgil-type__scale ul { margin: 14px 0 0; padding: 0; list-style: none; border-top: 1px solid var(--geulgil-line); }
+.geulgil-project .geulgil-type__scale li { display: grid; grid-template-columns: 72px minmax(0, 1fr); align-items: baseline; gap: 16px; padding-block: clamp(10px, 1.1vw, 14px); border-bottom: 1px solid var(--geulgil-line); }
+.geulgil-project .geulgil-type__label { color: var(--geulgil-purple); font-size: 13px; font-weight: 600; line-height: 1.4; }
+.geulgil-project .geulgil-type__label small { display: block; color: var(--geulgil-muted); font-size: 11px; font-weight: 400; }
+.geulgil-project .geulgil-type__text { min-width: 0; line-height: 1.3; letter-spacing: -.02em; overflow-wrap: anywhere; }
+.geulgil-project .geulgil-type__text--h1 { font-size: calc(var(--geulgil-type-base) * 2.4414); font-weight: 700; }
+.geulgil-project .geulgil-type__text--h2 { font-size: calc(var(--geulgil-type-base) * 1.9531); font-weight: 700; }
+.geulgil-project .geulgil-type__text--h3 { font-size: calc(var(--geulgil-type-base) * 1.5625); font-weight: 700; }
+.geulgil-project .geulgil-type__text--h4 { font-size: calc(var(--geulgil-type-base) * 1.25); font-weight: 700; }
+.geulgil-project .geulgil-type__text--body { font-size: var(--geulgil-type-base); }
+.geulgil-project .geulgil-type__text--detail { font-size: max(11px, calc(var(--geulgil-type-base) * .7225)); }
+
+.geulgil-project .geulgil-concept__principles { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 3vw, 40px); margin-top: clamp(48px, 5.5vw, 72px); padding-top: clamp(28px, 3vw, 40px); border-top: 1px solid var(--geulgil-line); }
+.geulgil-project .geulgil-concept__principles strong { display: block; font-size: clamp(18px, 1.6vw, 22px); font-weight: 500; letter-spacing: .02em; }
+.geulgil-project .geulgil-concept__principles span { display: block; margin-top: 8px; color: var(--geulgil-muted); font-size: 15px; }
 
 /* 05 / Website result: unequal columns keep a clear image hierarchy. */
 .geulgil-project .geulgil-results { padding-block: clamp(80px, 9vw, 150px) clamp(64px, 7vw, 112px); }
@@ -189,6 +225,7 @@
 @media (hover: hover) and (pointer: fine) {
   .geulgil-project .geulgil-screen:hover .geulgil-screen__image img { transform: scale(1.015); }
   .geulgil-project .geulgil-mobiles img:hover { transform: translateY(-4px); }
+  .geulgil-project .geulgil-concept__image:hover img { transform: scale(1.02); }
   .geulgil-project .geulgil-link:hover { background: var(--geulgil-ink); border-color: var(--geulgil-ink); }
   .geulgil-project .geulgil-link:hover .geulgil-link__arrow { transform: translate(3px, -3px); }
 }
@@ -198,8 +235,13 @@
   .geulgil-project .geulgil-intro__grid { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
   .geulgil-project .geulgil-facts { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .geulgil-project .geulgil-hero { background: linear-gradient(to bottom, var(--geulgil-paper) 0, var(--geulgil-paper) 12%, var(--geulgil-ink) 12%, var(--geulgil-ink) 72%, var(--geulgil-paper) 72%); }
-  .geulgil-project .geulgil-concept__grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
-  .geulgil-project .geulgil-concept__heading br { display: none; }
+  .geulgil-project .geulgil-concept { --geulgil-type-base: 14px; }
+  .geulgil-project .geulgil-concept__grid { gap: 40px; }
+  .geulgil-project .geulgil-type { grid-template-columns: minmax(0, 1fr); }
+  .geulgil-project .geulgil-type__font { display: grid; grid-template-columns: auto minmax(0, 1fr); column-gap: 32px; align-items: end; }
+  .geulgil-project .geulgil-type__font > .geulgil-eyebrow { grid-column: 1 / -1; }
+  .geulgil-project .geulgil-type__sample { grid-row: 2 / span 3; align-self: start; }
+  .geulgil-project .geulgil-type__font > :not(.geulgil-eyebrow):not(.geulgil-type__sample) { grid-column: 2; }
   .geulgil-project .geulgil-results__heading h3 { width: 64%; }
   .geulgil-project .geulgil-link { gap: 26px; }
 }
@@ -210,6 +252,14 @@
   .geulgil-project .geulgil-results__heading { flex-direction: column; gap: 16px; }
   .geulgil-project .geulgil-results__heading h3 { width: 100%; }
   .geulgil-project .geulgil-results__grid { grid-template-columns: minmax(0, 1fr); gap: 44px; }
+  .geulgil-project .geulgil-concept__grid { grid-template-columns: minmax(0, 1fr); }
+  .geulgil-project .geulgil-concept__words { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
+  .geulgil-project .geulgil-concept__words > div + div { margin-top: 0; }
+  .geulgil-project .geulgil-concept__words h4 { font-size: clamp(36px, 6.4vw, 48px); }
+  .geulgil-project .geulgil-palette { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+  .geulgil-project .geulgil-palette > div { grid-column: span 2; }
+  .geulgil-project .geulgil-palette > div:nth-last-child(-n+2) { grid-column: span 3; }
+  .geulgil-project .geulgil-concept__principles { grid-template-columns: minmax(0, 1fr); gap: 20px; }
   .geulgil-project :is(.geulgil-shot--curator, .geulgil-shot--detail, .geulgil-shot--list, .geulgil-shot--mobile) { grid-column: 1 / -1; margin-top: 0; }
 }
 
@@ -230,10 +280,18 @@
   .geulgil-project .geulgil-screen__dots { gap: 4px; }
   .geulgil-project .geulgil-screen__dots i { width: 4px; height: 4px; }
   .geulgil-project .geulgil-hero__caption { flex-direction: column; gap: 2px; margin-top: 16px; font-size: 12px; }
-  .geulgil-project .geulgil-concept { padding-bottom: 64px; }
-  .geulgil-project .geulgil-concept__heading h3 { font-size: 27px; }
-  .geulgil-project .geulgil-concept__list li { grid-template-columns: 36px minmax(0, 1fr); gap: 10px; }
-  .geulgil-project .geulgil-concept__list p { font-size: 14px; }
+  .geulgil-project .geulgil-concept { --geulgil-type-base: 12px; padding-bottom: 64px; }
+  .geulgil-project .geulgil-concept__heading h3 { font-size: clamp(30px, 8.6vw, 36px); }
+  .geulgil-project .geulgil-concept__lead { font-size: 15px; }
+  .geulgil-project .geulgil-concept__words { grid-template-columns: minmax(0, 1fr); gap: 22px; }
+  .geulgil-project .geulgil-concept__words h4 { font-size: 44px; }
+  .geulgil-project .geulgil-concept__words p { margin-top: 8px; font-size: 15px; }
+  .geulgil-project .geulgil-palette > div { min-height: 84px; padding: 12px 10px; font-size: 13px; }
+  .geulgil-project .geulgil-palette small { font-size: 11px; letter-spacing: 0; }
+  .geulgil-project .geulgil-type__font { grid-template-columns: minmax(0, 1fr); }
+  .geulgil-project .geulgil-type__font > :not(.geulgil-eyebrow):not(.geulgil-type__sample) { grid-column: 1; }
+  .geulgil-project .geulgil-type__sample { grid-row: auto; font-size: 88px; }
+  .geulgil-project .geulgil-type__scale li { grid-template-columns: 56px minmax(0, 1fr); gap: 10px; }
   .geulgil-project .geulgil-results { padding-block: 64px 56px; }
   .geulgil-project .geulgil-results__heading h3 { font-size: 27px; }
   .geulgil-project .geulgil-shot__caption { margin-top: 16px; gap: 12px; }
@@ -250,6 +308,7 @@
   .geulgil-project.geulgil-motion-ready [data-geulgil-reveal] { opacity: 1; transform: none; clip-path: none; transition: none; }
   .geulgil-project .geulgil-screen__image img,
   .geulgil-project .geulgil-mobiles img,
+  .geulgil-project .geulgil-concept__image img,
   .geulgil-project .geulgil-link,
   .geulgil-project .geulgil-link__arrow { transition: none; transform: none; }
 }
